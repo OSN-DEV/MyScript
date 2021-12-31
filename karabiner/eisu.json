@@ -1,0 +1,96 @@
+{
+  "title": "独自キー",
+  "rules": [
+    {
+      "description": "英数コンビネーション",
+      "manipulators": [
+        {
+            "description": "英数をファンクションキー化",
+            "type": "basic",
+            "from": { "key_code": "japanese_eisuu"},
+            "to": [{"set_variable": {"name":"eisu_key", "value":1}}],
+            "to_if_alone": [{"key_code": "japanese_eisuu"}],
+            "to_after_key_up": [{"set_variable": {"name":"eisu_key", "value":0}}],
+            "conditions":[{"type":"variable_if", "name": "eisu_key", "value": 0}]
+        },
+        {
+            "description": "Eisu + U => ←",
+            "type": "basic",
+            "from":{"key_code":"u"},
+            "to": [{"key_code": "left_arrow"}],
+            "conditions":[{"type":"variable_if", "name": "eisu_key", "value": 1}]
+        },
+        {
+            "description": "Eisu + I => ↓",
+            "type": "basic",
+            "from":{"key_code":"i"},
+            "to": [{"key_code": "down_arrow"}],
+            "conditions":[{"type":"variable_if", "name": "eisu_key", "value": 1}]
+        },
+        {
+            "description": "Eisu + O => ↑",
+            "type": "basic",
+            "from":{"key_code":"o"},
+            "to": [{"key_code": "up_arrow"}],
+            "conditions":[{"type":"variable_if", "name": "eisu_key", "value": 1}]
+        },
+        {
+            "description": "Eisu +P => →",
+            "type": "basic",
+            "from":{"key_code":"p"},
+            "to": [{"key_code": "right_arrow"}],
+            "conditions":[{"type":"variable_if", "name": "eisu_key", "value": 1}]
+        },
+        {
+            "description": "Eisu + J => Home",
+            "type": "basic",
+            "from":{"key_code":"j"},
+            "to": [{"key_code": "home"}],
+            "conditions":[{"type":"variable_if", "name": "eisu_key", "value": 1}]
+        },
+        {
+            "description": "Eisu + K => End",
+            "type": "basic",
+            "from":{"key_code":"k"},
+            "to": [{"key_code": "end"}],
+            "conditions":[{"type":"variable_if", "name": "eisu_key", "value": 1}]
+        },
+        {
+            "description": "Eisu + L => Enter",
+            "type": "basic",
+            "from":{"key_code":"l"},
+            "to": [{"key_code": "return_or_enter"}],
+            "conditions":[{"type":"variable_if", "name": "eisu_key", "value": 1}]
+        },
+        {
+            "description": "Eisu + ; => Escape",
+            "type": "basic",
+            "from":{"key_code":"semicolon"},
+            "to": [{"key_code": "escape"}],
+            "conditions":[{"type":"variable_if", "name": "eisu_key", "value": 1}]
+        },
+        {
+            "description": "Eisu + N => Delete",
+            "type": "basic",
+            "from":{"key_code":"n"},
+            "to": [{"key_code": "delete_forward"}],
+            "conditions":[{"type":"variable_if", "name": "eisu_key", "value": 1}]
+        },
+        {
+            "description": "Eisu + . => Tab",
+            "type": "basic",
+            "from":{"key_code":"period"},
+            "to": [{"key_code": "tab"}],
+            "conditions":[{"type":"variable_if", "name": "eisu_key", "value": 1}]
+        },
+        {
+            "description": "Eisu + M => Backspace",
+            "type": "basic",
+            "from":{"key_code":"m"},
+            "to": [{"key_code": "delete_or_backspace"}],
+            "conditions":[{"type":"variable_if", "name": "eisu_key", "value": 1}]
+        }
+      ]
+    }
+  ]
+}
