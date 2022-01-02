@@ -16,42 +16,42 @@
         {
             "description": "Eisu + U => ←",
             "type": "basic",
-            "from":{"key_code":"u"},
+            "from":{"key_code":"u", "modifiers":{"optional":["any"]}},
             "to": [{"key_code": "left_arrow"}],
             "conditions":[{"type":"variable_if", "name": "eisu_key", "value": 1}]
         },
         {
             "description": "Eisu + I => ↓",
             "type": "basic",
-            "from":{"key_code":"i"},
+            "from":{"key_code":"i", "modifiers":{"optional":["any"]}},
             "to": [{"key_code": "down_arrow"}],
             "conditions":[{"type":"variable_if", "name": "eisu_key", "value": 1}]
         },
         {
             "description": "Eisu + O => ↑",
             "type": "basic",
-            "from":{"key_code":"o"},
+            "from":{"key_code":"o", "modifiers":{"optional":["any"]}},
             "to": [{"key_code": "up_arrow"}],
             "conditions":[{"type":"variable_if", "name": "eisu_key", "value": 1}]
         },
         {
             "description": "Eisu +P => →",
             "type": "basic",
-            "from":{"key_code":"p"},
+            "from":{"key_code":"p", "modifiers":{"optional":["any"]}},
             "to": [{"key_code": "right_arrow"}],
             "conditions":[{"type":"variable_if", "name": "eisu_key", "value": 1}]
         },
         {
             "description": "Eisu + J => Home",
             "type": "basic",
-            "from":{"key_code":"j"},
+            "from":{"key_code":"j", "modifiers":{"optional":["any"]}},
             "to": [{"key_code": "home"}],
             "conditions":[{"type":"variable_if", "name": "eisu_key", "value": 1}]
         },
         {
             "description": "Eisu + K => End",
             "type": "basic",
-            "from":{"key_code":"k"},
+            "from":{"key_code":"k", "modifiers":{"optional":["any"]}},
             "to": [{"key_code": "end"}],
             "conditions":[{"type":"variable_if", "name": "eisu_key", "value": 1}]
         },
@@ -65,28 +65,28 @@
         {
             "description": "Eisu + ; => Escape",
             "type": "basic",
-            "from":{"key_code":"semicolon"},
+            "from":{"key_code":"semicolon", "modifiers":{"optional":["any"]}},
             "to": [{"key_code": "escape"}],
             "conditions":[{"type":"variable_if", "name": "eisu_key", "value": 1}]
         },
         {
             "description": "Eisu + N => Delete",
             "type": "basic",
-            "from":{"key_code":"n"},
+            "from":{"key_code":"n", "modifiers":{"optional":["any"]}},
             "to": [{"key_code": "delete_forward"}],
             "conditions":[{"type":"variable_if", "name": "eisu_key", "value": 1}]
         },
         {
             "description": "Eisu + . => Tab",
             "type": "basic",
-            "from":{"key_code":"period"},
+            "from":{"key_code":"period", "modifiers":{"optional":["any"]}},
             "to": [{"key_code": "tab"}],
             "conditions":[{"type":"variable_if", "name": "eisu_key", "value": 1}]
         },
         {
             "description": "Eisu + M => Backspace",
             "type": "basic",
-            "from":{"key_code":"m"},
+            "from":{"key_code":"m", "modifiers":{"optional":["any"]}},
             "to": [{"key_code": "delete_or_backspace"}],
             "conditions":[{"type":"variable_if", "name": "eisu_key", "value": 1}]
         }
