@@ -1,0 +1,17 @@
+[
+    {
+        "key": "ctrl+alt+k",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "editorTextFocus && vim.active && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "editorTextFocus && vim.active && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+shift+oem_102",
+        "command": "toggleVim"
+    },
+
+]

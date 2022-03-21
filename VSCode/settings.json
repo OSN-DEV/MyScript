@@ -1,0 +1,96 @@
+{
+    "editor.snippetSuggestions": "top",
+    "editor.tabCompletion": true,
+    "update.showReleaseNotes": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "vim.disableExtension": true,
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-、。「」【】『』（）！？／　てにをはがのともへでや",
+    "editor.renderWhitespace": "all",
+    "workbench.iconTheme": "vscode-icons",
+    "editor.fontFamily": "Consolas,'Myrica M', 'Meiryo UI', 'Courier New', monospace",
+    "html.autoClosingTags": false,
+    "editor.autoIndent": "brackets",
+    "editor.autoClosingQuotes": "never",
+    "workbench.colorTheme": "GitHub Dark Dimmed",
+    "editor.minimap.enabled": false,
+    "editor.detectIndentation": false,
+    "vscode_custom_css.imports": [
+        "file:///D:/Tools/text/VisualStudioCode/VSCode/data/user-data/User/vscode.css",
+        "file:///D:/NoInstall/VisualStudioCode/VSCode/data/user-data/User/vscode.css"
+    ],
+    "editor.fontLigatures": true,
+    "vscode_custom_css.policy": true,
+    "typescript.tsc.autoDetect": "off",
+    "grunt.autoDetect": "off",
+    "jake.autoDetect": "off",
+    "npm.autoDetect": "off",
+    "gulp.autoDetect": "off",
+    "[c]": {},
+    "php.validate.executablePath": "C:\\php\\php.exe",
+    "php.validate.run": "onType",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "markdown.extension.preview.autoShowPreviewToSide": true,
+    "sshfs.configs": [
+        {
+            "host": "192.168.150.184",
+            "name": "SmaplaLocal",
+            "password": "centos",
+            "username": "centos"
+        }
+    ],
+    // @sync-ignore
+    "alt-editor.binary": "D:\\NoInstall\\vim\\vim\\gvim.exe",
+    // @sync-ignore
+    // "alt-editor.binary": "D:\\Tools\\text\\Vim\\gvim82ole\\gvim.exe",
+    "alt-editor.args": "{filename}",
+    "bracketPairColorizer.consecutivePairColors": [
+        "()",
+        "[]",
+        "{}",
+        [
+            "darkorange",
+            "mediumorchid",
+            "chocolate"
+        ],
+        "Red"
+    ],
+    "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWxcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltcIkZGRkZGRlwiXSxcImZvcm1hdFdpZHRoXCI6XCIyNDBcIixcImNyZWF0ZVRhcmdldFwiOmZhbHNlLFwicGFnZUZvcm1hdFwiOntcInhcIjowLFwieVwiOjAsXCJ3aWR0aFwiOjgyNyxcImhlaWdodFwiOjExNjl9LFwic2VhcmNoXCI6dHJ1ZSxcInNob3dTdGFydFNjcmVlblwiOnRydWUsXCJncmlkQ29sb3JcIjpcIiNkMGQwZDBcIixcImRhcmtHcmlkQ29sb3JcIjpcIiM2ZTZlNmVcIixcImF1dG9zYXZlXCI6dHJ1ZSxcInJlc2l6ZUltYWdlc1wiOm51bGwsXCJvcGVuQ291bnRlclwiOjAsXCJ2ZXJzaW9uXCI6MTgsXCJ1bml0XCI6MSxcImlzUnVsZXJPblwiOmZhbHNlLFwidWlcIjpcIlwifSJ9",
+    "vim.useSystemClipboard": true,
+    "terminal.integrated.tabs.enabled": true,
+    "alt-editor.terminal": false,
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell"
+        },
+        "PowerShell 7": {
+            "path": [
+                "E:\\Apps\\Develop\\PowerShell\\PowerShell\\pwsh.exe"
+            ],
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": []
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        },
+    },
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+"terminal.integrated.defaultProfile.windows": "PowerShell 7",
+"editor.cursorStyle": "line",
+"editor.lineNumbers": "on",
+"editor.wordWrap": "off",
+"security.workspace.trust.untrustedFiles": "open",
+"workbench.list.keyboardNavigation": "simple",
+"editor.unicodeHighlight.ambiguousCharacters": false,
+"editor.unicodeHighlight.nonBasicASCII": false,
+"editor.acceptSuggestionOnEnter": "off",
+"javascript.updateImportsOnFileMove.enabled": "always",
+"explorer.confirmDragAndDrop": false,
+"notebook.outline.showCodeCells": true,
+"editor.tabSize": 2,
+}
