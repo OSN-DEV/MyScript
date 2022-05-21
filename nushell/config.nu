@@ -5,12 +5,14 @@ def create_left_prompt [] {
   E:\\Apps\\Develop\\Nushell\\starship\\starship prompt --cmd-duration $env.CMD_DURATION_MS $'--status=($env.LAST_EXIT_CODE)'
 }
 
+# ##############################################
+# alias
 alias ex = explorer
 alias nv = nvim
 alias nvq = nvim-qt
-alias nvconfig = cd "C:\\Users\\take\\AppData\\Local\\nvim"
 
 
+# ##############################################
 # app path
 let-env Path = ($env.Path | append "D:\\NoInstall\\VisualStudioCode\\VSCode")
 let-env Path = ($env.Path | append "D:\\NoInstall\\vim\\vim")
@@ -19,18 +21,24 @@ let-env Path = ($env.Path | append "E:\\Apps\\Develop\\Nushell\\starship")
 let-env Path = ($env.Path | append "E:\\Apps\\Develop\\busybox")
 let-env Path = ($env.Path | append "E:\\Apps\\Text\\nvim\\nvim\\bin")
 
-#  user path
+# ##############################################
+# user object
+# vim related
 let nv = {
-    init-path: "C:\\Users\\take\\AppData\\Local\\nvim\\init.vim"
+    setting-path: "C:\\Users\\take\\AppData\\Local\\nvim"
+    init-vim: "C:\\Users\\take\\AppData\\Local\\nvim\\init.vim"
+    elly-git: "C:\\Users\\take\\AppData\\Local\\nvim\\plugged\\elly.vim"
+    elly-vim: "C:\\Users\\take\\AppData\\Local\\nvim\\plugged\\elly.vim\\colors\\elly.vim"
+    osn-git: "C:\\Users\\take\\AppData\\Local\\nvim\\colors"
+    osn-vim: "C:\\Users\\take\\AppData\\Local\\nvim\\colors\\osn.vim"
 }
+
+# bookmark
 let bm = {
     books: "F:\\OneDrive\\Business\\OneDrive - PrivateSpace\\01.project\\books",
-    domestic-accounts: "F:\\OneDrive\\Business\\OneDrive - PrivateSpace\\02.area\\private\\domestic accounts book",
+    dic: "F:\\OneDrive\\Business\\OneDrive - PrivateSpace\\03.resource\\dic",
+    cash-book: "F:\\OneDrive\\Business\\OneDrive - PrivateSpace\\02.area\\private\\domestic accounts book",
 }
-let test = {
-	a: "AA",
-	b: "BB",
-	}
 
 # starship
 let-env PROMPT_COMMAND = { create_left_prompt }
