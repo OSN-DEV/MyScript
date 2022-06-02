@@ -1,6 +1,10 @@
 # Get editor completions based on the config schema
 # "$schema" = 'https://starship.rs/config-schema.json'
 
+
+
+
+
 # Inserts a blank line between shell prompts
 add_newline = true
 
@@ -18,7 +22,28 @@ min_time = 1_000 # millisecond
 show_notifications = true 
 min_time_to_notify = 60_000 # millisecond
 
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
 
+[git_branch]
+format = " [$symbol$branch]($style) "
+symbol = "🍣 "
+style = "bold yellow"
+
+
+[git_status]
+conflicted = "⚔️ "
+ahead = "🏎️ 💨 ×${count}"
+behind = "🐢 ×${count}"
+diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count}"
+untracked = "🛤️  ×${count}"
+stashed = "📦 "
+modified = "📝 ×${count}"
+staged = "🗃️  ×${count}"
+renamed = "📛 ×${count}"
+deleted = "🗑️  ×${count}"
+style = "bright-white"
+format = "$all_status$ahead_behind"
 
 
 # Disable the package module, hiding it from the prompt completely

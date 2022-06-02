@@ -16,6 +16,7 @@ let-env Path = ($env.Path | append "E:\\Apps\\Develop\\Nushell\\starship")
 let-env Path = ($env.Path | append "E:\\Apps\\Develop\\busybox")
 let-env Path = ($env.Path | append "E:\\Apps\\Text\\nvim\\nvim\\bin")
 let-env Path = ($env.Path | append "E:\\Apps\\Develop\\Nushell\\zoxide")
+let-env Path = ($env.Path | append "E:\\Apps\\Develop\\oh-my-posh")
 
 
 # ##############################################
@@ -42,6 +43,11 @@ let bm = {
 # starship
 source ~\.cache\starship\init.nu
 
+
+# ##############################################
+# oh-my-posh
+# https://ohmyposh.dev/docs/installation/prompt
+# let-env PROMPT_COMMAND = { E:\\Apps\\Develop\\oh-my-posh\\oh-my-posh.exe --config E:\\Apps\\Develop\\oh-my-posh\\poshthemes\\poshthemes/M365Princess.omp.json }
 
 # ##############################################
 # color theme

@@ -1,184 +1,58 @@
 {
+    "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
     "actions": 
     [
         {
-            "command": "paste",
-            "keys": "ctrl+v"
-        },
-        {
             "command": 
             {
-                "action": "newTab"
+                "action": "quakeMode"
             },
-            "keys": "ctrl+t"
-        },
-        {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "horizontal"
-            },
-            "keys": "ctrl+d"
-        },
-        {
-            "command": 
-            {
-                "action": "switchToTab",
-                "index": 3
-            },
-            "keys": "alt+4"
-        },
-        {
-            "command": 
-            {
-                "action": "copy",
-                "singleLine": false
-            },
-            "keys": "ctrl+c"
+            "keys": "ctrl+shift+@"
         },
         {
             "command": "unbound",
-            "keys": "ctrl+shift+t"
-        },
-        {
-            "command": "unbound",
-            "keys": "ctrl+alt+1"
-        },
-        {
-            "command": "unbound",
-            "keys": "ctrl+alt+2"
-        },
-        {
-            "command": "unbound",
-            "keys": "ctrl+alt+3"
-        },
-        {
-            "command": "unbound",
-            "keys": "ctrl+alt+4"
-        },
-        {
-            "command": "unbound",
-            "keys": "ctrl+alt+5"
-        },
-        {
-            "command": "unbound",
-            "keys": "ctrl+alt+6"
-        },
-        {
-            "command": "unbound",
-            "keys": "ctrl+alt+7"
-        },
-        {
-            "command": "unbound",
-            "keys": "ctrl+alt+8"
-        },
-        {
-            "command": "unbound",
-            "keys": "alt+shift+minus"
-        },
-        {
-            "command": "unbound",
-            "keys": "alt+shift+plus"
-        },
-        {
-            "command": "unbound",
-            "keys": "ctrl+shift+c"
-        },
-        {
-            "command": "unbound",
-            "keys": "ctrl+shift+v"
-        },
-        {
-            "command": 
-            {
-                "action": "switchToTab",
-                "index": 7
-            },
-            "keys": "alt+8"
-        },
-        {
-            "command": 
-            {
-                "action": "switchToTab",
-                "index": 0
-            },
-            "keys": "alt+1"
-        },
-        {
-            "command": 
-            {
-                "action": "switchToTab",
-                "index": 4
-            },
-            "keys": "alt+5"
-        },
-        {
-            "command": 
-            {
-                "action": "switchToTab",
-                "index": 1
-            },
-            "keys": "alt+2"
-        },
-        {
-            "command": 
-            {
-                "action": "switchToTab",
-                "index": 5
-            },
-            "keys": "alt+6"
-        },
-        {
-            "command": 
-            {
-                "action": "switchToTab",
-                "index": 2
-            },
-            "keys": "alt+3"
-        },
-        {
-            "command": 
-            {
-                "action": "switchToTab",
-                "index": 6
-            },
-            "keys": "alt+7"
-        },
-        {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "vertical"
-            },
-            "keys": "ctrl+shift+d"
+            "keys": "win+sc(41)"
         }
     ],
     "defaultProfile": "{2b372ca1-1ee2-403d-a839-6d63077ad871}",
+    "initialPosition": "800,250",
+    "language": "en-US",
     "profiles": 
     {
         "defaults": 
         {
-            "acrylicOpacity": 1.0,
+            "font": 
+            {
+                "face": "HackGenNerd Console"
+            },
+            "opacity": 100,
             "useAcrylic": true
         },
         "list": 
         [
             {
-                "acrylicOpacity": 0.80000000000000004,
                 "commandline": "cmd.exe /k D:\\NoInstall\\Cmder\\mini\\vendor\\init.bat",
                 "guid": "{9f4064e9-408c-43f6-8752-6a7d7f577aa6}",
                 "hidden": false,
                 "icon": "D:\\NoInstall\\Cmder\\mini\\icons\\cmder.ico",
                 "name": "Cmder",
+                "opacity": 100,
                 "startingDirectory": "D:\\NoInstall\\Cmder\\mini\\config\\profile.d"
             },
             {
+                "colorScheme": "One Half Dark",
                 "commandline": "E:\\Apps\\Develop\\Nushell\\nushell\\nu.exe",
+                "font": 
+                {
+                    "face": "HackGenNerd Console",
+                    "size": 11
+                },
                 "guid": "{2b372ca1-1ee2-403d-a839-6d63077ad871}",
                 "hidden": false,
                 "icon": "E:\\Apps\\Develop\\Nushell\\nu.ico",
                 "name": "nushell",
+                "opacity": 95,
                 "startingDirectory": "f:\\root"
             },
             {
@@ -188,17 +62,16 @@
                     "face": "JetBrainsMono Nerd Font",
                     "size": 10
                 },
+                "guid": "{41acd753-6f96-52a5-afd6-05e89efa8e5c}",
                 "hidden": false,
                 "name": "PowerShell 7.0"
             },
             {
-                "commandline": "powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "name": "Windows PowerShell"
             },
             {
-                "commandline": "cmd.exe",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "name": "cmd"
@@ -214,6 +87,42 @@
                 "hidden": false,
                 "name": "Ubuntu-20.04",
                 "source": "Windows.Terminal.Wsl"
+            },
+            {
+                "guid": "{b8fbf6d2-be62-555b-99c3-002937b97133}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{f3e02fb4-1133-544e-a4bb-7c3257da4d7b}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{c67d8498-759a-5a14-a7a2-5b38746e52ed}",
+                "hidden": true,
+                "name": "Developer Command Prompt for VS 2019",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{c54a5118-c12c-5609-84ed-2aa9aa428635}",
+                "hidden": true,
+                "name": "Developer PowerShell for VS 2019",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{c752b7dc-57c0-5bcb-a475-83322a13d927}",
+                "hidden": true,
+                "name": "Developer Command Prompt for VS 2017",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{92c34655-1d17-5da2-ad38-e1ab8b6f33ec}",
+                "hidden": true,
+                "name": "Developer Command Prompt for VS 2017",
+                "source": "Windows.Terminal.VisualStudio"
             }
         ]
     },
@@ -264,6 +173,29 @@
             "selectionBackground": "#FFFFFF",
             "white": "#CCCCCC",
             "yellow": "#C19C00"
+        },
+        {
+            "background": "#282A36",
+            "black": "#21222C",
+            "blue": "#BD93F9",
+            "brightBlack": "#6272A4",
+            "brightBlue": "#D6ACFF",
+            "brightCyan": "#A4FFFF",
+            "brightGreen": "#69FF94",
+            "brightPurple": "#FF92DF",
+            "brightRed": "#FF6E6E",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#FFFFA5",
+            "cursorColor": "#F8F8F2",
+            "cyan": "#8BE9FD",
+            "foreground": "#F8F8F2",
+            "green": "#50FA7B",
+            "name": "Dracula",
+            "purple": "#FF79C6",
+            "red": "#FF5555",
+            "selectionBackground": "#44475A",
+            "white": "#F8F8F2",
+            "yellow": "#F1FA8C"
         },
         {
             "background": "#282C34",
@@ -426,5 +358,6 @@
             "white": "#C0C0C0",
             "yellow": "#808000"
         }
-    ]
+    ],
+    "useAcrylicInTabRow": true
 }
