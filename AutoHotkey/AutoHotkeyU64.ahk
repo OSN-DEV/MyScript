@@ -131,6 +131,49 @@ return
 ^+!J::WinRestore, A                 ; ウィンドウをリストア(Ctrl + Shift + Alt + J)
 ^+!M::WinMinimize, A                ; ウィンドウを最小化(Ctrl + Shift + Alt + M)
 
+#+J::                               ; ウィンドウをサイズそのままに左に配置(Win + Shift + J)
+    GetCurrentMonitorInfo(ml, mw, mh)
+    WinGetPos, x, y, w, h, A
+    if (h < mh) {
+        newY := (mh - h) / 2
+    } else {
+      newY := 0
+    }
+    WinMove, A,, 0, %newY%
+return
+
+#+K::                               ; ウィンドウをサイズそのままに中央に配置(Win + Shift + K)
+    GetCurrentMonitorInfo(ml, mw, mh)
+    WinGetPos, x, y, w, h, A
+    if (h < mh) {
+        newY := (mh - h) / 2
+    } else {
+      newY := 0
+    }
+    if (w < mw) {
+      newX := (mw - w) / 2
+    } else {
+      newX := 0
+    }
+    WinMove, A,, %newX%, %newY%
+return
+
+#+L::                               ; ウィンドウをサイズそのままに右に配置(Win + Shift + L)
+    GetCurrentMonitorInfo(ml, mw, mh)
+    WinGetPos, x, y, w, h, A
+    if (h < mh) {
+        newY := (mh - h) / 2
+    } else {
+      newY := 0
+    }
+    if (w < mw) {
+      newX := (mw - w)
+    } else {
+      newX := 0
+    }
+    WinMove, A,, %newX%, %newY%
+return
+
 ; ウィンドウを画面中央に配置(Ctrl + Shift + Alt + K)
 ^+!K::
     GetCurrentMonitorInfo(ml, mw, mh)

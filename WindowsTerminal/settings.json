@@ -16,6 +16,8 @@
         }
     ],
     "defaultProfile": "{2b372ca1-1ee2-403d-a839-6d63077ad871}",
+    "experimental.rendering.forceFullRepaint": false,
+    "experimental.rendering.software": false,
     "initialPosition": "800,250",
     "language": "en-US",
     "profiles": 
@@ -41,6 +43,8 @@
                 "startingDirectory": "D:\\NoInstall\\Cmder\\mini\\config\\profile.d"
             },
             {
+                "backgroundImage": "F:\\OneDrive\\Business\\OneDrive - PrivateSpace\\05.storage\\material\\Wallpaper\\starry_sky_milky_way_night_124665_1920x1080.jpg",
+                "backgroundImageOpacity": 0.3,
                 "colorScheme": "One Half Dark",
                 "commandline": "E:\\Apps\\Develop\\Nushell\\nushell\\nu.exe",
                 "font": 
@@ -52,8 +56,13 @@
                 "hidden": false,
                 "icon": "E:\\Apps\\Develop\\Nushell\\nu.ico",
                 "name": "nushell",
-                "opacity": 95,
-                "startingDirectory": "f:\\root"
+                "opacity": 90,
+                "startingDirectory": "f:\\root",
+                "unfocusedAppearance": 
+                {
+                    "backgroundImage": "F:\\OneDrive\\Business\\OneDrive - PrivateSpace\\05.storage\\material\\Wallpaper\\wp4756390-rest-wallpapers.jpg",
+                    "backgroundImageOpacity": 0.3
+                }
             },
             {
                 "commandline": "E:\\Apps\\Develop\\PowerShell\\PowerShell\\pwsh.exe  -WorkingDirectory F:\\root",
