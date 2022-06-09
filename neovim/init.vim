@@ -48,42 +48,28 @@ colorscheme osn
 "テーマの種類は以下のSSを参照
 "https://github.com/vim-airline/vim-airline/wiki/Screenshots
 let g:airline_theme = 'sol'                      "
-
 let g:airline#extensions#tabline#enabled = 1        "画面上部にバッファを表示
 let g:airline_powerline_fonts = 1                   "
 
 
 
 "NerdTree
-"noremap <leader>n :NERDTreeFocus<CR>
 noremap <leader>n :NERDTreeFind<CR>
-noremap <C-n> :NERDTreeToggle<CR>                       "Ctrl + nでNEDRTreeの表示・非表示を切り替える
+"Ctrl + nでNEDRTreeの表示・非表示を切り替える
+noremap <C-n> :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen=3                                "フィアル・ブックマーク選択時にツリーを閉じる
 
 
 
 "===============================
-"original color
-"highlight lineNr ctermfg=101        "ターミナルだと常に明るい黄色なので色を変更
-"hi NonText    ctermbg=None ctermfg=59 guibg=NONE guifg=None             "eol, extends,preceds
-"hi SpecialKey ctermbg=None ctermfg=59 guibg=NONE guifg=None             "nbsp,tab,trail
-"hi Normal ctermbg=None ctermfg=59 guibg=#282E37 guifg=None                 "通常のテキスト
-"hi EndOfBuffer ctermbg=None ctermfg=59 guibg=NONE guifg=None                 "通常のテキスト
-"hi Normal guibg=gray14
-"hi LineNr ctermfg=94
-"hi VertSplit guibg=#0c0c0c
-"hi Special guibg=#0c0c0c
-"hi Identifier guibg=#0c0c0c
-
-
-"===============================
 "original keymap
-nnoremap <Leader>o o<Esc>0"_D
-nnoremap <Leader>O O<Esc>0"_D
-"noremap! <A-o>: o<Esc>
-noremap <Esc><Esc> : nohlsearch<Esc>                "検索対象のハイライトを消す
+noremap <Leader>o o<Esc>0"_D
+noremap <Leader>O O<Esc>0"_D
+"検索対象のハイライトを消す
+noremap <Esc><Esc> :noh<CR>
 
-noremap <A-z> :call ToggleWrap()<CR>                "Alt + zで折り返しの有無を切り替える
+"Alt + zで折り返しの有無を切り替える
+noremap <A-z> :call ToggleWrap()<CR>
 function ToggleWrap()
     if (&wrap ==1)
         set nowrap
@@ -92,6 +78,8 @@ function ToggleWrap()
     endif
 endfunction
 
+" ハイライトのグループ名を取得
+map gm :call SynStack()<CR>
 function! SynStack ()
     for i1 in synstack(line("."), col("."))
         let i2 = synIDtrans(i1)
@@ -100,4 +88,4 @@ function! SynStack ()
         echo n1 "->" n2
     endfor
 endfunction
-map gm :call SynStack()<CR>
+
