@@ -29,8 +29,8 @@ call plug#begin('C:\Users\take\AppData\Local\nvim\plugged')
 Plug 'https://github.com/vim-airline/vim-airline'           "vimの上下に表示されるステータスバー的なもの
 Plug 'https://github.com/vim-airline/vim-airline-themes'    "airlineのテーマ
 Plug 'https://github.com/preservim/nerdtree'                "ファイルツリー
-Plug 'github:OSN-DEV/elly.vim.git'                          "カラーテーマ(ターミナルが16進数を使えない場合、ターミナルとGUIはどちらか一方にしか使用できない)
-Plug 'github:OSN-DEV/morhetz/gruvbox'                       "カラーテーマ
+Plug 'https://github.com/jeetsukumaran/vim-buffergator'
+'Plug 'https://github.com/tinyheero/vim-myhelp.git'
 call plug#end()
 
 
