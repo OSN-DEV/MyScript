@@ -94,17 +94,30 @@
 "workbench.colorTheme": "Red",
 // https://code.visualstudio.com/api/references/theme-color#editor-colors
 "workbench.colorCustomizations": {
-  "editor.foreground": "#0000ff",
-    // "editor.foreground": "#cccccc",
-		// "editor.background": "#2E2F35",
-		// "editorLineNumber.activeForeground": "#d7ce93",
-		// "editorLineNumber.foreground": "#5f561b",
-    
-    // "activityBar.background": "#24252B",
-    // "activityBar.border": "#1A1B21",
-    // "activityBar.foreground": "#999999",
-		// "activityBarBadge.foreground": "#000000e6",
-		// "activityBarBadge.background": "#d7ce93",
+    "editor.foreground": "#cccccc",
+    "editor.background": "#2E2F35",
+		"editor.findMatchBackground": "#6E6604",
+		"editor.findMatchHighlightBackground": "#463E00",
+
+		"editor.selectionBackground": "#525252",
+		"editor.selectionHighlightBackground": "#424349",
+		"editor.inactiveSelectionBackground": "#424349",
+		"editor.lineHighlightBackground": "#424349",
+
+		"editor.rangeHighlightBackground": "#0000ff",
+		"editor.wordHighlightBackground": "#0000ff",
+		"editor.wordHighlightStrongBackground": "#0000ff",
+
+    "editorLineNumber.activeForeground": "#d7ce93",
+    "editorLineNumber.foreground": "#5f561b",
+
+
+    "activityBar.background": "#24252B",
+    "activityBar.border": "#1A1B21",
+    "activityBar.foreground": "#999999",
+		"activityBarBadge.foreground": "#000000e6",
+		"activityBarBadge.background": "#d7ce93",
+
 
 		// "badge.background": "#0000ff",
 		// "badge.foreground": "#0000ff",
@@ -156,15 +169,8 @@
 		// "dropdown.border": "#242424",
 		// "dropdown.foreground": "#eeffff",
 		// "dropdown.listBackground": "#242424",
-		// "editor.findMatchBackground": "#ffdf803c",
-		// "editor.findMatchHighlightBackground": "#ffffff16",
-				// "editor.inactiveSelectionBackground": "#ffffff10",
-		// "editor.lineHighlightBackground": "#ffffff0d",
-		// "editor.rangeHighlightBackground": "#ffffff16",
-		// "editor.selectionBackground": "#ffffff1a",
-		// "editor.selectionHighlightBackground": "#ffffff16",
-		// "editor.wordHighlightBackground": "#ffffff16",
-		// "editor.wordHighlightStrongBackground": "#ffffff1a",
+
+    
 		// "editorBracketMatch.background": "#ffffff16",
 		// "editorBracketMatch.border": "#ffffff16",
 		// "editorCodeLens.foreground": "#ffffff16",

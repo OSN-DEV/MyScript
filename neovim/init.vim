@@ -5,8 +5,8 @@ set nu                                                                          
 set guifont=HackGenNerd\ Console:h12                                            "フォント設定。半角スペースは\でエスケープ。フォントサイズは:h～で設定
 set clipboard+=unnamedplus                                                      "クリップボードをOSと共有する
 set expandtab                                                                   "Tabキーでスペースを挿入。無効にするにはset noexpandtabを実行
-set tabstop=4                                                                   "Tabキーのサイズ
-set shiftwidth=4                                                                "インデントの見た目の空白数
+set tabstop=2                                                                   "Tabキーのサイズ
+set shiftwidth=2                                                                "インデントの見た目の空白数
 set cursorline                                                                  "カーソルラインを有効(ellyのテーマで下線は表示されないように設定されているっぽい)
 set list                                                                        "空白文字を可視化
 set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%,space:･          "特殊文字

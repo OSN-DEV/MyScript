@@ -38,6 +38,8 @@ let bm = {
     books: "F:\\OneDrive\\Business\\OneDrive - PrivateSpace\\01.project\\books",
     dic: "F:\\OneDrive\\Business\\OneDrive - PrivateSpace\\03.resource\\dic",
     cash-book: "F:\\OneDrive\\Business\\OneDrive - PrivateSpace\\02.area\\private\\domestic accounts book",
+    vscode-color: "F:\\root\\user-data\\app\\others\\VSCodeColorRef",
+    study: "F:\\inbox\\study",
 }
 
 # ##############################################
