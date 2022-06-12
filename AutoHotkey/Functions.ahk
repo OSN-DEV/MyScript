@@ -75,6 +75,7 @@ MoveActiveWindow(direction) {
     WinMove, A,, %x%, %y%
 }
 
+
 ; ##################################################
 ; アクティブウィンドウの移動
 ; param size : サイズ
@@ -162,8 +163,7 @@ GetCurrentMonitorIndexBaseOnMouse() {
 
 ; ##################################################
 ; カレントモニタのインデックスを取得
-; return インデックス
-; remark モニタは２台の前提
+; position 位置
 ; ##################################################
 MoveCursor(position) {
     GetMonitorInfo(GetCurrentMonitorIndexBaseOnMouse(), monitorWidth, monitorHeight, monitorOriginX)
@@ -197,4 +197,19 @@ MoveCursor(position) {
         y := monitorHeight - offset
     }
     MouseMove, %x%, %y%
+}
+
+
+; ##################################################
+; キーの送信
+; key 送信するキー
+; keyIfShift Shift押下時に送信するキー
+; ##################################################
+SendInputKey(key, keyIfShift) {
+  if GetKeyState("Shift") {
+    SendRaw, %keyIfShift%
+  } else {
+    SendRaw, %key%
+  }
+  return
 }

@@ -23,12 +23,24 @@ Numpad6::SendInput, !{PrintScreen}          ; Alt + PrintScreen
 Numpad7::SendInput, !{F4}                   ; Alt + F4
 Numpad9::SendInput, ^{F4}                   ; Ctrl + F4
 RShift & s::SendInput, !{Tab}               ; Alt + Tab
-RShift & d::SendInput, !{PrintScreen}          ; Alt + PrintScreen
-RShift & q::SendInput, !{F4}                   ; Alt + F4
-RShift & e::SendInput, ^{F4}                   ; Ctrl + F4
-vk1C & `;::SendInput, -                     ; 変換 + ;
-vk1C::SendInput, {vk1C}                     ; 変換
-AppsKey::SendInput, {AppsKey}               ; App
+RShift & d::SendInput, !{PrintScreen}       ; Alt + PrintScreen
+RShift & q::SendInput, !{F4}                ; Alt + F4
+RShift & e::SendInput, ^{F4}                ; Ctrl + F4
+F12 & q::SendInputKey(1, "!")               ; 1
+F12 & w::SendInputKey(2, """")              ; 2
+F12 & e::SendInputKey(3, "#")               ; 3
+F12 & r::SendInputKey(4, "$")               ; 4
+F12 & t::SendInputKey(5, "%")               ; 5
+F12 & y::SendInputKey(6, "&")               ; 6
+F12 & u::SendInputKey(7, "'")               ; 7
+F12 & i::SendInputKey(8, "(")               ; 8
+F12 & o::SendInputKey(9, ")")               ; 9
+F12 & p::SendInputKey(0, "")                ; 0
+F12 & `;::SendInputKey("-", "=")            ;  
+F12 & a::
+    WinMove, A,,,, 600, 600
+    return
+
 
 ; --------------------------------------------------
 ; アプリ起動
@@ -54,7 +66,10 @@ Numpad4::RunOrActivate("Q-Dir_x64.exe", "D:\NoInstall\Q-Dir\Q-Dir\Q-Dir_x64.exe"
 ^+!W::Run, "F:\OneDrive\Business\OneDrive - PrivateSpace\00.inbox\下書き.docx"
 
 ; gvim(Ctrl + Shift + Alt + G)
-^+!G::RunOrActivate("gvim.exe", "D:\NoInstall\vim\vim\gvim.exe")
+;^+!G::RunOrActivate("gvim.exe", "D:\NoInstall\vim\vim\gvim.exe")
+; neovim(Ctrl + Shift + Alt + G)
+^+!G::RunOrActivate("nvim-qt.exe", "E:\Apps\Text\nvim\v0.7.0\bin\nvim-qt.exe")
+
 
 ; cmder(Ctrl + Shift + Alt + Space)
 ; ^+!Space::ToggleApp("ConEmu64.exe", "D:\NoInstall\Cmder\mini\Cmder.exe")
@@ -109,6 +124,7 @@ return
     x := monitorX + (monitorWidth / 2)
     y := monitorHeight / 2
     MouseMove, %x%, %y%
+    return
 
 
     return

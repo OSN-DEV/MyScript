@@ -33,6 +33,7 @@ let nv = {
 
 # bookmark
 let bm = {
+    root:"F:\\root",
     one-drive: "F:\\OneDrive\\Business\\OneDrive - PrivateSpace",
     books: "F:\\OneDrive\\Business\\OneDrive - PrivateSpace\\01.project\\books",
     dic: "F:\\OneDrive\\Business\\OneDrive - PrivateSpace\\03.resource\\dic",
