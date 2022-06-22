@@ -37,6 +37,7 @@ F12 & i::SendInputKey(8, "(")               ; 8
 F12 & o::SendInputKey(9, ")")               ; 9
 F12 & p::SendInputKey(0, "")                ; 0
 F12 & `;::SendInputKey("-", "=")            ;  
+F12 & l::SendInputKey("p", "P")               ; p
 F12 & a::
     WinMove, A,,,, 600, 600
     return
