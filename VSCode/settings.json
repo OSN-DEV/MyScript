@@ -97,29 +97,35 @@
     // ################################################################
     // Base colors
     // ################################################################
-    // "focusBorder": "#ffffff33",
-    // "foreground": "#eeffff",
-    // disabledForeground : "????",
-    // "widget.shadow": "#111111",
-    // "selection.background": "#82aaffb3",
-    // "descriptionForeground": "????",
-    // "errorForeground": "#ff647e",
-    // "icon.foreground": "????",
-    // "sash.hoverBorder": "????",
+    "focusBorder": "#ffffff33",
+    "foreground": "#eeffff",
+    "disabledForeground" : "#cccccc33",
+    "widget.shadow": "#111111",
+    "selection.background": "#82aaffb3",
+    "descriptionForeground": "#0000ff",
+    "errorForeground": "#ff647e",
+    "icon.foreground": "#eeffffcc",
+    "sash.hoverBorder": "#0000ff",
+    // 
+    // ################################################################
+    // Window border
+    // ################################################################
+    "window.activeBorder": "#0000ff",
+    "window.inactiveBorder": "#0000ff",
     // 
     // ################################################################
     // Activity Bar
     // ################################################################
     "activityBar.background": "#24252B",
-    // "activityBar.dropBorder": "#????"
-    "activityBar.foreground": "#999999",
-    // "activityBar.inactiveForeground": "????",
+    "activityBar.dropBorder": "#0000ff",
+    "activityBar.foreground": "#746924",
+    "activityBar.inactiveForeground": "#ffffff33",
     "activityBar.border": "#463E00",
     "activityBarBadge.background": "#d7ce93",
     "activityBarBadge.foreground": "#000000e6",
-    // "activityBar.activeBorder": "????",
-    // "activityBar.activeBackground": "????",
-    // "activityBar.activeFocusBorder": ????,
+    "activityBar.activeBorder": "#d7ce93",
+    "activityBar.activeBackground": "#00000033",
+    "activityBar.activeFocusBorder": "#0000ff",
     // 
     // ################################################################
     // Editor
@@ -157,7 +163,7 @@
     "list.dropBackground": "#0000ff",
     "list.focusForeground": "#ffffff",
     "list.focusBackground": "#ffffff21",
-    "list.highlightForeground": "#0000ff",
+    "list.highlightForeground": "#5f561b",
     "list.hoverBackground": "#424349",
     "list.hoverForeground": "#ffffff",
     "list.inactiveFocusBackground": "#424349",
@@ -165,10 +171,13 @@
     "list.inactiveSelectionForeground": "#ffffff",
     "list.invalidItemForeground": "#0000ff",
 
-    // "list.invalidItemForeground": "#ff647e",
     // 
     // ################################################################
-    // sideBar
+    // xxx
+    // ################################################################
+    // 
+    // ################################################################
+    // xxx
     // ################################################################
 
     // "badge.background": "#a2db4f",
@@ -357,5 +366,11 @@
   },
   "[javascript]": {
     "editor.defaultFormatter": "SimonSiefke.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
   }
 }
