@@ -356,21 +356,31 @@
         }
       },
       {
-        "scope": "entity.name.tag.html",
+        "scope": [
+          "entity.name.tag.html",
+          ],
         "settings": {
-          "fontStyle": "italic",
-          "foreground": "#00FF00",
+          "foreground": "#81A1C1",
+        }
+      },
+      {
+        "scope": [
+          "entity.other.attribute-name.html",
+          "meta.attribute.unrecognized.version.html",
+          "meta.tag.metadata.processing.xml.html"
+          ],
+        "settings": {
+          "foreground": "#8FBCBB",
+        }
+      },
+      {
+        "scope": [
+          "punctuation.definition.tag",
+          ],
+        "settings": {
+          "foreground": "#81A1C1",
         }
       }
     ]
   },
-  "[javascript]": {
-    "editor.defaultFormatter": "SimonSiefke.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-  "[css]": {
-    "editor.defaultFormatter": "vscode.css-language-features"
-  }
 }
