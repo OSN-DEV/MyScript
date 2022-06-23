@@ -67,7 +67,7 @@ let NERDTreeQuitOnOpen=3                                "フィアル・ブッ�
 "original keymap
 noremap <Leader>o o<Esc>0"_D
 noremap <Leader>O O<Esc>0"_D
-noremap <Leader>s S<ESC>
+noremap <Leader>d S<ESC>
 "検索対象のハイライトを消す
 noremap <Esc><Esc> :noh<CR>
 

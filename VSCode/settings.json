@@ -99,7 +99,7 @@
     // ################################################################
     "focusBorder": "#ffffff33",
     "foreground": "#eeffff",
-    "disabledForeground" : "#cccccc33",
+    "disabledForeground": "#cccccc33",
     "widget.shadow": "#111111",
     "selection.background": "#82aaffb3",
     "descriptionForeground": "#0000ff",
@@ -170,7 +170,6 @@
     "list.inactiveSelectionBackground": "#ffffff21",
     "list.inactiveSelectionForeground": "#ffffff",
     "list.invalidItemForeground": "#0000ff",
-
     // 
     // ################################################################
     // xxx
@@ -179,7 +178,6 @@
     // ################################################################
     // xxx
     // ################################################################
-
     // "badge.background": "#a2db4f",
     // "badge.foreground": "#000000e6",
     // "breadcrumb.background": "#2E2F35",
@@ -260,7 +258,6 @@
     // "inputValidation.infoBorder": "#3576ff",
     // "inputValidation.warningBackground": "#1e1e1e",
     // "inputValidation.warningBorder": "#ffb223",
-
     // "merge.border": "#ff0f38",
     // "merge.currentContentBackground": "#3576ff1a",
     // "merge.currentHeaderBackground": "#3576ff",
@@ -356,9 +353,15 @@
         }
       },
       {
+        "scope": ["string.quoted.single.html","string.quoted.double.html"],
+        "settings": {
+          "foreground": "#A3BE8C",
+        }
+      },
+      {
         "scope": [
           "entity.name.tag.html",
-          ],
+        ],
         "settings": {
           "foreground": "#81A1C1",
         }
@@ -368,7 +371,7 @@
           "entity.other.attribute-name.html",
           "meta.attribute.unrecognized.version.html",
           "meta.tag.metadata.processing.xml.html"
-          ],
+        ],
         "settings": {
           "foreground": "#8FBCBB",
         }
@@ -376,7 +379,7 @@
       {
         "scope": [
           "punctuation.definition.tag",
-          ],
+        ],
         "settings": {
           "foreground": "#81A1C1",
         }
