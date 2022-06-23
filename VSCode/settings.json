@@ -156,14 +156,79 @@
     "sideBarTitle.foreground": "#cccccc",
     // 
     // ################################################################
+    // Editor Groups & Tabs
+    // ################################################################
+    "editorGroup.border": "#0000ff",
+    "editorGroup.dropBackground": "#0000ff",
+    "editorGroupHeader.noTabsBackground": "#0000ff",
+    "editorGroupHeader.tabsBackground": "#0000ff",
+    "editorGroupHeader.border": "#0000ff",
+    "editorGroup.emptyBackground": "#0000ff",
+    "editorGroup.focusedEmptyBorder": "#0000ff",
+    "editorGroup.dropIntoPromptForeground": "#0000ff",
+    "editorGroup.dropIntoPromptBackground": "#0000ff",
+    "editorGroup.dropIntoPromptBorder": "#0000ff",
+    "tab.activeBackground": "#0000ff",
+    "tab.unfocusedActiveBackground": "#0000ff",
+    "tab.activeForeground": "#0000ff",
+    "tab.border": "#0000ff",
+    "tab.activeBorder": "#0000ff",
+    "tab.unfocusedActiveBorder": "#0000ff",
+    "tab.activeBorderTop": "#0000ff",
+    "tab.unfocusedActiveBorderTop": "#0000ff",
+    "tab.lastPinnedBorder": "#0000ff",
+    "tab.inactiveBackground": "#0000ff",
+    "tab.unfocusedInactiveBackground": "#0000ff",
+    "tab.inactiveForeground": "#0000ff",
+    "tab.unfocusedActiveForeground": "#0000ff",
+    "tab.unfocusedInactiveForeground": "#0000ff",
+    "tab.hoverBackground": "#0000ff",
+    "tab.unfocusedHoverBackground": "#0000ff",
+    "tab.hoverForeground": "#0000ff",
+    "tab.unfocusedHoverForeground": "#0000ff",
+    "tab.hoverBorder": "#0000ff",
+    "tab.unfocusedHoverBorder": "#0000ff",
+    "tab.activeModifiedBorder": "#0000ff",
+    "tab.inactiveModifiedBorder": "#0000ff",
+    "tab.unfocusedActiveModifiedBorder": "#0000ff",
+    "tab.unfocusedInactiveModifiedBorder": "#0000ff",
+
+
+
+    // "editorGroup.border": "#ffffff12",
+    // "editorGroup.dropBackground": "#212121cc",
+    // "editorGroupHeader.noTabsBackground": "#1e1e1e",
+    // "editorGroupHeader.tabsBackground": "#1e1e1e",
+    // "tab.activeBackground": "#282828",
+    // "tab.activeForeground": "#ffffff",
+    // "tab.border": "#282828",
+    // "tab.activeBorder": "#88ca29",
+    // "tab.inactiveBackground": "#1a1a1a",
+    // "tab.inactiveForeground": "#bdffff",
+    // "tab.unfocusedInactiveForeground": "#8bffff",
+    // "tab.hoverBackground": "#282828",
+    // "tab.unfocusedHoverBackground": "#282828",
+
+
+
+editorPane.background
+Background color of the editor pane visible on the left and right side of the centered editor layout.
+
+sideBySideEditor.horizontalBorder
+Color to separate two editors from each other when shown side by side in an editor group from top to bottom.
+
+sideBySideEditor.verticalBorder
+Color to separate two editors from each other when shown side by side in an editor group from left to right
+    // 
+    // ################################################################
     // list
     // ################################################################
     "list.activeSelectionForeground": "#eeeeee",
     "list.activeSelectionBackground": "#525252",
-    "list.dropBackground": "#0000ff",
+    "list.dropBackground": "#d7ce9346",
     "list.focusForeground": "#ffffff",
     "list.focusBackground": "#ffffff21",
-    "list.highlightForeground": "#5f561b",
+    "list.highlightForeground": "#5f561b8c",
     "list.hoverBackground": "#424349",
     "list.hoverForeground": "#ffffff",
     "list.inactiveFocusBackground": "#424349",
@@ -201,10 +266,6 @@
     // "editorCodeLens.foreground": "#ffffff16",
     // "editorCursor.foreground": "#c3e88d",
     // "editorError.foreground": "#ff647e",
-    // "editorGroup.border": "#ffffff12",
-    // "editorGroup.dropBackground": "#212121cc",
-    // "editorGroupHeader.noTabsBackground": "#1e1e1e",
-    // "editorGroupHeader.tabsBackground": "#1e1e1e",
     // "editorGroupHeader.tabsBorder": "#282828",
     // "editorGutter.addedBackground": "#c3e88db3",
     // "editorGutter.background": "#242424",
@@ -307,16 +368,7 @@
     // "statusBarItem.hoverBackground": "#ffffff1a",
     // "statusBarItem.prominentBackground": "#88ca29",
     // "statusBarItem.prominentHoverBackground": "#a2db4f",
-    // "tab.activeBackground": "#282828",
-    // "tab.activeBorder": "#88ca29",
-    // "tab.activeForeground": "#ffffff",
-    // "tab.border": "#282828",
-    // "tab.hoverBackground": "#282828",
-    // "tab.inactiveBackground": "#1a1a1a",
-    // "tab.inactiveForeground": "#bdffff",
     // "tab.unfocusedActiveForeground": "#bdffff",
-    // "tab.unfocusedHoverBackground": "#282828",
-    // "tab.unfocusedInactiveForeground": "#8bffff",
     // "terminal.ansiBlack": "#000000",
     // "terminal.ansiBlue": "#427ab3",
     // "terminal.ansiBrightBlack": "#686a66",
