@@ -91,8 +91,9 @@
   "explorer.confirmDragAndDrop": false,
   "notebook.outline.showCodeCells": true,
   "editor.tabSize": 2,
-  "workbench.colorTheme": "Red",
+  "workbench.colorTheme": "Community Material Theme Darker",
   // https://code.visualstudio.com/api/references/theme-color#editor-colors
+  // https://docs.microsoft.com/en-us/visualstudio/extensibility/ux-guidelines/color-value-reference-for-visual-studio?view=vs-2022
   "workbench.colorCustomizations": {
     // ################################################################
     // Base colors
@@ -132,15 +133,15 @@
     // ################################################################
     "editor.foreground": "#cccccc",
     "editor.background": "#2E2F35",
-    "editor.findMatchBackground": "#6E6604",
-    "editor.findMatchHighlightBackground": "#463E00",
+    "editor.findMatchBackground": "#e2e7e344",
+    "editor.findMatchHighlightBackground": "#5f7c64",
     "editor.inactiveSelectionBackground": "#424349",
     "editor.lineHighlightBackground": "#424349",
     "editor.rangeHighlightBackground": "#525252",
     "editor.selectionBackground": "#525252",
     "editor.selectionHighlightBackground": "#424349",
-    "editor.wordHighlightBackground": "#463E00",
-    "editor.wordHighlightStrongBackground": "#463E00",
+    "editor.wordHighlightBackground": "#444444",
+    "editor.wordHighlightStrongBackground": "#66655e",
     "editorLineNumber.activeForeground": "#d7ce93",
     "editorLineNumber.foreground": "#5f561b",
     "editorWhitespace.foreground": "#ffffff16",
@@ -158,67 +159,48 @@
     // ################################################################
     // Editor Groups & Tabs
     // ################################################################
-    "editorGroup.border": "#0000ff",
-    "editorGroup.dropBackground": "#0000ff",
+    "editorGroup.border": "#7e7006",
+    "editorGroup.dropBackground": "#55000055",
     "editorGroupHeader.noTabsBackground": "#0000ff",
-    "editorGroupHeader.tabsBackground": "#0000ff",
-    "editorGroupHeader.border": "#0000ff",
-    "editorGroup.emptyBackground": "#0000ff",
-    "editorGroup.focusedEmptyBorder": "#0000ff",
-    "editorGroup.dropIntoPromptForeground": "#0000ff",
-    "editorGroup.dropIntoPromptBackground": "#0000ff",
-    "editorGroup.dropIntoPromptBorder": "#0000ff",
-    "tab.activeBackground": "#0000ff",
-    "tab.unfocusedActiveBackground": "#0000ff",
-    "tab.activeForeground": "#0000ff",
-    "tab.border": "#0000ff",
-    "tab.activeBorder": "#0000ff",
-    "tab.unfocusedActiveBorder": "#0000ff",
-    "tab.activeBorderTop": "#0000ff",
-    "tab.unfocusedActiveBorderTop": "#0000ff",
+    "editorGroupHeader.tabsBackground": "#55000033",
+    "editorGroupHeader.border": "#463E00",
+    "editorGroup.emptyBackground": "#5e5353a2",
+    "editorGroup.focusedEmptyBorder": "#7e700652",
+    "editorGroup.dropIntoPromptForeground": "#cccccc",
+    "editorGroup.dropIntoPromptBackground": "#550000",
+    "editorGroup.dropIntoPromptBorder": "#cccccc",
+    "tab.activeBackground": "#490000",
+    "tab.unfocusedActiveBackground": "#550000dc",
+    "tab.activeForeground": "#dddddd",
+    "tab.border": "#dddddd33",
+    "tab.activeBorder": "#d7ce93",
+    "tab.unfocusedActiveBorder": "#d7ce93bd",
+    "tab.activeBorderTop": "#d7ce9333",
+    "tab.unfocusedActiveBorderTop": "#d7ce9322",
     "tab.lastPinnedBorder": "#0000ff",
-    "tab.inactiveBackground": "#0000ff",
-    "tab.unfocusedInactiveBackground": "#0000ff",
-    "tab.inactiveForeground": "#0000ff",
-    "tab.unfocusedActiveForeground": "#0000ff",
-    "tab.unfocusedInactiveForeground": "#0000ff",
-    "tab.hoverBackground": "#0000ff",
-    "tab.unfocusedHoverBackground": "#0000ff",
-    "tab.hoverForeground": "#0000ff",
-    "tab.unfocusedHoverForeground": "#0000ff",
-    "tab.hoverBorder": "#0000ff",
-    "tab.unfocusedHoverBorder": "#0000ff",
+    "tab.inactiveBackground": "#49000033",
+    "tab.unfocusedInactiveBackground": "#49000033",
+    "tab.inactiveForeground": "#dddddd",
+    "tab.unfocusedActiveForeground": "#cccccc",
+    "tab.unfocusedInactiveForeground": "#cccccc",
+    "tab.hoverBackground": "#ffffff10",
+    "tab.unfocusedHoverBackground": "#ffffff10",
+    "tab.hoverForeground": "#bbbbbb",
+    "tab.unfocusedHoverForeground": "#bbbbbb",
+    "tab.hoverBorder": "#c4bb85",
+    "tab.unfocusedHoverBorder": "#c4bb85",
     "tab.activeModifiedBorder": "#0000ff",
     "tab.inactiveModifiedBorder": "#0000ff",
     "tab.unfocusedActiveModifiedBorder": "#0000ff",
     "tab.unfocusedInactiveModifiedBorder": "#0000ff",
+    "editorPane.background": "#0000ff",
+    "sideBySideEditor.horizontalBorder": "#0000ff",
+    "sideBySideEditor.verticalBorder": "#0000ff",
 
 
 
-    // "editorGroup.border": "#ffffff12",
-    // "editorGroup.dropBackground": "#212121cc",
-    // "editorGroupHeader.noTabsBackground": "#1e1e1e",
-    // "editorGroupHeader.tabsBackground": "#1e1e1e",
-    // "tab.activeBackground": "#282828",
-    // "tab.activeForeground": "#ffffff",
-    // "tab.border": "#282828",
-    // "tab.activeBorder": "#88ca29",
-    // "tab.inactiveBackground": "#1a1a1a",
-    // "tab.inactiveForeground": "#bdffff",
-    // "tab.unfocusedInactiveForeground": "#8bffff",
-    // "tab.hoverBackground": "#282828",
-    // "tab.unfocusedHoverBackground": "#282828",
 
 
-
-editorPane.background
-Background color of the editor pane visible on the left and right side of the centered editor layout.
-
-sideBySideEditor.horizontalBorder
-Color to separate two editors from each other when shown side by side in an editor group from top to bottom.
-
-sideBySideEditor.verticalBorder
-Color to separate two editors from each other when shown side by side in an editor group from left to right
     // 
     // ################################################################
     // list
@@ -228,7 +210,7 @@ Color to separate two editors from each other when shown side by side in an edit
     "list.dropBackground": "#d7ce9346",
     "list.focusForeground": "#ffffff",
     "list.focusBackground": "#ffffff21",
-    "list.highlightForeground": "#5f561b8c",
+    "list.highlightForeground": "#c9b42b",
     "list.hoverBackground": "#424349",
     "list.hoverForeground": "#ffffff",
     "list.inactiveFocusBackground": "#424349",
@@ -405,37 +387,34 @@ Color to separate two editors from each other when shown side by side in an edit
         }
       },
       {
-        "scope": ["string.quoted.single.html","string.quoted.double.html"],
+        "scope": ["keyword.control.export.js", "meta.export.js", "source.js"],
         "settings": {
-          "foreground": "#A3BE8C",
+          "foreground": "#C586C0",
         }
       },
       {
-        "scope": [
-          "entity.name.tag.html",
-        ],
+        "scope": ["storage.type.js"],
         "settings": {
-          "foreground": "#81A1C1",
+          "foreground": "#569CD6",
         }
       },
       {
-        "scope": [
-          "entity.other.attribute-name.html",
-          "meta.attribute.unrecognized.version.html",
-          "meta.tag.metadata.processing.xml.html"
-        ],
+        "scope": ["variable.other.readwrite.js"],
         "settings": {
-          "foreground": "#8FBCBB",
+          "foreground": "#9CDCFE",
+          "fontStyle":"",
         }
       },
       {
-        "scope": [
-          "punctuation.definition.tag",
-        ],
+        "scope": "constant.numeric.decimal.js",
         "settings": {
-          "foreground": "#81A1C1",
+          "foreground": "#B5CEA8",
         }
-      }
+      },
     ]
   },
 }
+
+
+
+
