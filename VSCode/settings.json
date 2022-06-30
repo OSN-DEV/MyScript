@@ -91,7 +91,7 @@
   "explorer.confirmDragAndDrop": false,
   "notebook.outline.showCodeCells": true,
   "editor.tabSize": 2,
-  "workbench.colorTheme": "Community Material Theme Darker",
+  "workbench.colorTheme": "Red",
   // https://code.visualstudio.com/api/references/theme-color#editor-colors
   // https://docs.microsoft.com/en-us/visualstudio/extensibility/ux-guidelines/color-value-reference-for-visual-studio?view=vs-2022
   "workbench.colorCustomizations": {
@@ -111,8 +111,88 @@
     // ################################################################
     // Window border
     // ################################################################
-    "window.activeBorder": "#0000ff",
-    "window.inactiveBorder": "#0000ff",
+    "window.activeBorder": "#463E00",
+    "window.inactiveBorder": "#463E00",
+    // 
+    // ################################################################
+    // Text colors
+    // ################################################################
+    // 
+    // ################################################################
+    // Action colors
+    // ################################################################
+    // 
+    // ################################################################
+    // Button control
+    // ################################################################
+    // 
+    // ################################################################
+    // Dropdown control
+    // ################################################################
+    // 
+    // ################################################################
+    // Input control
+    // ################################################################
+    // "input.background": "#0000ff",
+    // "input.border": "#0000ff",
+    // "input.foreground": "#0000ff",
+    // "input.placeholderForeground": "#0000ff",
+    // "inputOption.activeBackground": "#0000ff",
+    // "inputOption.activeBorder": "#0000ff",
+    // "inputOption.activeForeground": "#0000ff",
+    // "inputOption.hoverBackground": "#0000ff",
+    // "inputValidation.errorBackground": "#0000ff",
+    // "inputValidation.errorForeground": "#0000ff",
+    // "inputValidation.errorBorder": "#0000ff",
+    // "inputValidation.infoBackground": "#0000ff",
+    // "inputValidation.infoForeground": "#0000ff",
+    // "inputValidation.infoBorder": "#0000ff",
+    // "inputValidation.warningForeground": "#0000ff",
+    // "inputValidation.warningBorder": "#0000ff",
+
+
+
+
+    // "input.background": "#1e1e1e",
+    // "input.border": "#242424",
+    // "input.foreground": "#eeffff",
+    // "input.placeholderForeground": "#eeffffa6",
+    // "inputOption.activeBorder": "#212121",
+    // "inputValidation.errorBackground": "#1e1e1e",
+    // "inputValidation.errorBorder": "#ff0f38",
+    // "inputValidation.infoBackground": "#1e1e1e",
+    // "inputValidation.infoBorder": "#3576ff",
+    // "inputValidation.warningBackground": "#1e1e1e",
+    // "inputValidation.warningBorder": "#ffb223",
+
+    // 
+    // ################################################################
+    // Scrollbar control
+    // ################################################################
+    // 
+    // ################################################################
+    // Badge
+    // ################################################################
+    // 
+    // ################################################################
+    // Progress bar
+    // ################################################################
+    // 
+    // ################################################################
+    // list and trees
+    // ################################################################
+    "list.activeSelectionForeground": "#eeeeee",
+    "list.activeSelectionBackground": "#525252",
+    "list.dropBackground": "#d7ce9346",
+    "list.focusForeground": "#ffffff",
+    "list.focusBackground": "#ffffff21",
+    "list.highlightForeground": "#c9b42b",
+    "list.hoverBackground": "#424349",
+    "list.hoverForeground": "#ffffff",
+    "list.inactiveFocusBackground": "#424349",
+    "list.inactiveSelectionBackground": "#ffffff21",
+    "list.inactiveSelectionForeground": "#ffffff",
+    "list.invalidItemForeground": "#0000ff",
     // 
     // ################################################################
     // Activity Bar
@@ -129,24 +209,6 @@
     "activityBar.activeFocusBorder": "#0000ff",
     // 
     // ################################################################
-    // Editor
-    // ################################################################
-    "editor.foreground": "#cccccc",
-    "editor.background": "#2E2F35",
-    "editor.findMatchBackground": "#e2e7e344",
-    "editor.findMatchHighlightBackground": "#5f7c64",
-    "editor.inactiveSelectionBackground": "#424349",
-    "editor.lineHighlightBackground": "#424349",
-    "editor.rangeHighlightBackground": "#525252",
-    "editor.selectionBackground": "#525252",
-    "editor.selectionHighlightBackground": "#424349",
-    "editor.wordHighlightBackground": "#444444",
-    "editor.wordHighlightStrongBackground": "#66655e",
-    "editorLineNumber.activeForeground": "#d7ce93",
-    "editorLineNumber.foreground": "#5f561b",
-    "editorWhitespace.foreground": "#ffffff16",
-    // 
-    // ################################################################
     // sideBar
     // ################################################################
     "sideBar.background": "#24252B",
@@ -155,6 +217,10 @@
     "sideBarSectionHeader.background": "#525252",
     "sideBarSectionHeader.foreground": "#cccccc",
     "sideBarTitle.foreground": "#cccccc",
+    // 
+    // ################################################################
+    // Minimap
+    // ################################################################
     // 
     // ################################################################
     // Editor Groups & Tabs
@@ -196,35 +262,137 @@
     "editorPane.background": "#0000ff",
     "sideBySideEditor.horizontalBorder": "#0000ff",
     "sideBySideEditor.verticalBorder": "#0000ff",
-
-
-
-
-
     // 
     // ################################################################
-    // list
+    // Editor color
     // ################################################################
-    "list.activeSelectionForeground": "#eeeeee",
-    "list.activeSelectionBackground": "#525252",
-    "list.dropBackground": "#d7ce9346",
-    "list.focusForeground": "#ffffff",
-    "list.focusBackground": "#ffffff21",
-    "list.highlightForeground": "#c9b42b",
-    "list.hoverBackground": "#424349",
-    "list.hoverForeground": "#ffffff",
-    "list.inactiveFocusBackground": "#424349",
-    "list.inactiveSelectionBackground": "#ffffff21",
-    "list.inactiveSelectionForeground": "#ffffff",
-    "list.invalidItemForeground": "#0000ff",
+    "editor.foreground": "#cccccc",
+    "editor.background": "#2E2F35",
+    "editor.findMatchBackground": "#e2e7e344",
+    "editor.findMatchHighlightBackground": "#5f7c64",
+    "editor.inactiveSelectionBackground": "#424349",
+    "editor.lineHighlightBackground": "#424349",
+    "editor.rangeHighlightBackground": "#525252",
+    "editor.selectionBackground": "#525252",
+    "editor.selectionHighlightBackground": "#424349",
+    "editor.wordHighlightBackground": "#444444",
+    "editor.wordHighlightStrongBackground": "#66655e",
+    "editorLineNumber.activeForeground": "#d7ce93",
+    "editorLineNumber.foreground": "#5f561b",
+    "editorWhitespace.foreground": "#ffffff16",
     // 
     // ################################################################
-    // xxx
+    // Diff editor colors
     // ################################################################
     // 
     // ################################################################
-    // xxx
+    // Editor widget colors
     // ################################################################
+    // 
+    // ################################################################
+    // Peek view colors
+    // ################################################################
+    // 
+    // ################################################################
+    // Merge conflicts colors
+    // ################################################################
+    // 
+    // ################################################################
+    // Panel colors
+    // ################################################################
+    // 
+    // ################################################################
+    // Status Bar colors
+    // ################################################################
+    // 
+    // ################################################################
+    // Title Bar colors
+    // ################################################################
+    // 
+    // ################################################################
+    // Menu Bar colors
+    // ################################################################
+    // 
+    // ################################################################
+    // Notification colors
+    // ################################################################
+    // 
+    // ################################################################
+    // Banner colors
+    // ################################################################
+    // 
+    // ################################################################
+    // Extensions colors
+    // ################################################################
+    // 
+    // ################################################################
+    // Quick picker colors
+    // ################################################################
+    // 
+    // ################################################################
+    // Keybinding label colors
+    // ################################################################
+    // 
+    // ################################################################
+    // Keyboard shortcut table colors
+    // ################################################################
+    // 
+    // ################################################################
+    // Integrated Terminal colors
+    // ################################################################
+    // 
+    // ################################################################
+    // Debug colors
+    // ################################################################
+    // 
+    // ################################################################
+    // Testing colors
+    // ################################################################
+    // 
+    // ################################################################
+    // Welcome page colors
+    // ################################################################
+    // 
+    // ################################################################
+    // Source Control colors
+    // ################################################################
+    // 
+    // ################################################################
+    // Git colors
+    // ################################################################
+    // 
+    // ################################################################
+    // Settings Editor colors
+    // ################################################################
+    // 
+    // ################################################################
+    // Snippets colors
+    // ################################################################
+    // 
+    // ################################################################
+    // Symbol Icons colors
+    // ################################################################
+    // 
+    // ################################################################
+    // Debug Icons colors
+    // ################################################################
+    // 
+    // ################################################################
+    // Notebook colors
+    // ################################################################
+    // 
+    // ################################################################
+    // Chart colors
+    // ################################################################
+    // 
+    // ################################################################
+    // Ports Colors
+    // ################################################################
+    // 
+    // ################################################################
+    // Extension colors
+    // ################################################################
+
     // "badge.background": "#a2db4f",
     // "badge.foreground": "#000000e6",
     // "breadcrumb.background": "#2E2F35",
@@ -290,17 +458,7 @@
     // "gitDecoration.ignoredResourceForeground": "#eeffffa6",
     // "gitDecoration.modifiedResourceForeground": "#95b7ff",
     // "gitDecoration.untrackedResourceForeground": "#cbeb9d",
-    // "input.background": "#1e1e1e",
-    // "input.border": "#242424",
-    // "input.foreground": "#eeffff",
-    // "input.placeholderForeground": "#eeffffa6",
-    // "inputOption.activeBorder": "#212121",
-    // "inputValidation.errorBackground": "#1e1e1e",
-    // "inputValidation.errorBorder": "#ff0f38",
-    // "inputValidation.infoBackground": "#1e1e1e",
-    // "inputValidation.infoBorder": "#3576ff",
-    // "inputValidation.warningBackground": "#1e1e1e",
-    // "inputValidation.warningBorder": "#ffb223",
+
     // "merge.border": "#ff0f38",
     // "merge.currentContentBackground": "#3576ff1a",
     // "merge.currentHeaderBackground": "#3576ff",
@@ -387,22 +545,30 @@
         }
       },
       {
-        "scope": ["keyword.control.export.js", "meta.export.js", "source.js"],
+        "scope": [
+          "keyword.control.export.js",
+          "meta.export.js",
+          "source.js"
+        ],
         "settings": {
           "foreground": "#C586C0",
         }
       },
       {
-        "scope": ["storage.type.js"],
+        "scope": [
+          "storage.type.js"
+        ],
         "settings": {
           "foreground": "#569CD6",
         }
       },
       {
-        "scope": ["variable.other.readwrite.js"],
+        "scope": [
+          "variable.other.readwrite.js"
+        ],
         "settings": {
           "foreground": "#9CDCFE",
-          "fontStyle":"",
+          "fontStyle": "",
         }
       },
       {
@@ -411,10 +577,45 @@
           "foreground": "#B5CEA8",
         }
       },
+      {
+        "scope": [
+          "keyword.control.export.ts",
+          "meta.export.ts",
+        ],
+        "settings": {
+          "fontStyle": "",
+        }
+      },
+      {
+        "scope": "punctuation.definition.tag.begin.html",
+        "settings": {
+          "foreground": "#808080",
+        }
+      },
+      {
+        "scope": ["entity.name.tag.html","meta.tag.metadata.doctype.html"],
+        "settings": {
+          "foreground": "#569CD6",
+        }
+      },
+      {
+        "scope": ["entity.other.attribute-name.html","meta.tag.metadata.doctype.html"],
+        "settings": {
+          "foreground": "#9CDCFE",
+        }
+      },
+      {
+        "scope": ["punctuation.separator.key-value.html"],
+        "settings": {
+          "foreground": "#eeeeee",
+        }
+      },
+      {
+        "scope": ["punctuation.definition.tag.end.html"],
+        "settings": {
+          "foreground": "#808080",
+        }
+      },
     ]
   },
 }
-
-
-
-
