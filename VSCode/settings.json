@@ -106,7 +106,7 @@
     "descriptionForeground": "#0000ff",
     "errorForeground": "#ff647e",
     "icon.foreground": "#eeffffcc",
-    "sash.hoverBorder": "#0000ff",
+    "sash.hoverBorder": "#eeffff93",
     // 
     // ################################################################
     // Window border
@@ -133,31 +133,24 @@
     // ################################################################
     // Input control
     // ################################################################
-    // "input.background": "#0000ff",
-    // "input.border": "#0000ff",
-    // "input.foreground": "#0000ff",
-    // "input.placeholderForeground": "#0000ff",
-    // "inputOption.activeBackground": "#0000ff",
-    // "inputOption.activeBorder": "#0000ff",
-    // "inputOption.activeForeground": "#0000ff",
-    // "inputOption.hoverBackground": "#0000ff",
-    // "inputValidation.errorBackground": "#0000ff",
-    // "inputValidation.errorForeground": "#0000ff",
-    // "inputValidation.errorBorder": "#0000ff",
-    // "inputValidation.infoBackground": "#0000ff",
-    // "inputValidation.infoForeground": "#0000ff",
-    // "inputValidation.infoBorder": "#0000ff",
-    // "inputValidation.warningForeground": "#0000ff",
-    // "inputValidation.warningBorder": "#0000ff",
+    "input.background": "#523232",
+    "input.border": "#6e6e6e",
+    "input.foreground": "#eeffff",
+    "input.placeholderForeground": "#eeffffa6",
+    "inputOption.activeBackground": "#eeffff22",
+    "inputOption.activeBorder": "#d7ce93",
+    "inputOption.activeForeground": "#d7ce93",
+    "inputOption.hoverBackground": "#d7ce93aa",
+    "inputValidation.errorBackground": "#0000ff",
+    "inputValidation.errorForeground": "#0000ff",
+    "inputValidation.errorBorder": "#0000ff",
+    "inputValidation.infoBackground": "#0000ff",
+    "inputValidation.infoForeground": "#0000ff",
+    "inputValidation.infoBorder": "#0000ff",
+    "inputValidation.warningForeground": "#0000ff",
+    "inputValidation.warningBorder": "#0000ff",
 
 
-
-
-    // "input.background": "#1e1e1e",
-    // "input.border": "#242424",
-    // "input.foreground": "#eeffff",
-    // "input.placeholderForeground": "#eeffffa6",
-    // "inputOption.activeBorder": "#212121",
     // "inputValidation.errorBackground": "#1e1e1e",
     // "inputValidation.errorBorder": "#ff0f38",
     // "inputValidation.infoBackground": "#1e1e1e",
