@@ -44,9 +44,10 @@
             },
             {
                 "backgroundImage": "F:\\OneDrive\\Business\\OneDrive - PrivateSpace\\05.storage\\material\\Wallpaper\\starry_sky_milky_way_night_124665_1920x1080.jpg",
-                "backgroundImageOpacity": 0.3,
+                "backgroundImageOpacity": 0.29999999999999999,
                 "colorScheme": "One Half Dark",
                 "commandline": "E:\\Apps\\Develop\\Nushell\\nushell\\nu.exe",
+                "cursorShape": "vintage",
                 "font": 
                 {
                     "face": "HackGenNerd Console",
@@ -61,7 +62,7 @@
                 "unfocusedAppearance": 
                 {
                     "backgroundImage": "F:\\OneDrive\\Business\\OneDrive - PrivateSpace\\05.storage\\material\\Wallpaper\\wp4756390-rest-wallpapers.jpg",
-                    "backgroundImageOpacity": 0.3
+                    "backgroundImageOpacity": 0.29999999999999999
                 }
             },
             {
