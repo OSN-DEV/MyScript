@@ -301,6 +301,11 @@
     // ################################################################
     // Title Bar colors
     // ################################################################
+    "titleBar.activeBackground": "#1a1a1a",
+    "titleBar.activeForeground": "#ffffff",
+    "titleBar.inactiveBackground": "#242424",
+    "titleBar.inactiveForeground": "#ffffff44",
+    "titleBar.border": "#463E00",
     // 
     // ################################################################
     // Menu Bar colors
@@ -521,11 +526,6 @@
     // "terminal.background": "#1a1a1a",
     // "terminal.foreground": "#eeffff",
     // "terminal.selectionBackground": "#c1deff5a",
-    // "titleBar.activeBackground": "#1a1a1a",
-    // "titleBar.activeForeground": "#ffffff",
-    // "titleBar.border": "#1a1a1a",
-    // "titleBar.inactiveBackground": "#242424",
-    // "titleBar.inactiveForeground": "#bdffff",
     // "walkThrough.embeddedEditorBackground": "#212121",
   },
   "editor.tokenColorCustomizations": {
@@ -610,6 +610,12 @@
       },
       {
         "scope": "keyword.operator",
+        "settings": {
+          "foreground": "#D4D4D4",
+        }
+      },
+      {
+        "scope": "meta.jsx.children.js",
         "settings": {
           "foreground": "#D4D4D4",
         }
