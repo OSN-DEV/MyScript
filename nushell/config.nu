@@ -16,7 +16,7 @@ let-env Path = ($env.Path | append "E:\\Apps\\Develop\\Nushell\\starship")
 let-env Path = ($env.Path | append "E:\\Apps\\Develop\\busybox")
 let-env Path = ($env.Path | append "E:\\Apps\\Text\\nvim\\nvim\\bin")
 let-env Path = ($env.Path | append "E:\\Apps\\Develop\\Nushell\\zoxide")
-let-env Path = ($env.Path | append "E:\\Apps\\Develop\\oh-my-posh")
+# let-env Path = ($env.Path | append "E:\\Apps\\Develop\\oh-my-posh")
 
 
 # ##############################################

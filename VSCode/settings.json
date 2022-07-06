@@ -4,7 +4,7 @@
   "update.showReleaseNotes": false,
   "workbench.startupEditor": "newUntitledFile",
   "vim.disableExtension": true,
-  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-、。「」【】『』（）！？／　てにをはがのともへでや",
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-、。「」【】『』（）！？／ てにをはがのともへでや",
   "editor.renderWhitespace": "all",
   "workbench.iconTheme": "vscode-icons",
   "editor.fontFamily": "Consolas,'Myrica M', 'Meiryo UI', 'Courier New', monospace",
@@ -141,9 +141,9 @@
     "inputOption.activeBorder": "#d7ce93",
     "inputOption.activeForeground": "#d7ce93",
     "inputOption.hoverBackground": "#d7ce93aa",
-    "inputValidation.errorBackground": "#0000ff",
-    "inputValidation.errorForeground": "#0000ff",
-    "inputValidation.errorBorder": "#0000ff",
+    "inputValidation.errorBackground": "#cc5f5f",
+    "inputValidation.errorForeground": "#eeeeee",
+    "inputValidation.errorBorder": "#4e2626",
     "inputValidation.infoBackground": "#0000ff",
     "inputValidation.infoForeground": "#0000ff",
     "inputValidation.infoBorder": "#0000ff",
@@ -259,20 +259,31 @@
     // ################################################################
     // Editor color
     // ################################################################
-    "editor.foreground": "#cccccc",
     "editor.background": "#2E2F35",
+    "editor.foreground": "#cccccc",
+    "editorLineNumber.foreground": "#5f561b",
+    "editorLineNumber.activeForeground": "#d7ce93",
+    // "editorCursor.background": "#c3e88d",
+    "editorCursor.foreground": "#c3e88d",
+    "editor.selectionBackground": "#525252",
+    // "editor.selectionForeground": "#525252",
+    "editor.inactiveSelectionBackground": "#424349",
+    "editor.selectionHighlightBackground": "#424349",
+    // "editor.selectionHighlightBorder": "#424349",
+    "editor.wordHighlightBackground": "#444444",
+    // "editor.wordHighlightBorder": "#444444",
+    "editor.wordHighlightStrongBackground": "#66655e",
+    // "editor.wordHighlightStrongBorder": "#66655e",
     "editor.findMatchBackground": "#e2e7e344",
     "editor.findMatchHighlightBackground": "#5f7c64",
-    "editor.inactiveSelectionBackground": "#424349",
+    // "editor.findMatchBorder": "#5f7c64",
+    // "editor.findMatchHighlightBorder": "#5f7c64",
+    // "editor.findRangeHighlightBorder": "#5f7c64",
     "editor.lineHighlightBackground": "#424349",
     "editor.rangeHighlightBackground": "#525252",
-    "editor.selectionBackground": "#525252",
-    "editor.selectionHighlightBackground": "#424349",
-    "editor.wordHighlightBackground": "#444444",
-    "editor.wordHighlightStrongBackground": "#66655e",
-    "editorLineNumber.activeForeground": "#d7ce93",
-    "editorLineNumber.foreground": "#5f561b",
     "editorWhitespace.foreground": "#ffffff16",
+
+
     // 
     // ################################################################
     // Diff editor colors
@@ -412,7 +423,6 @@
     // "editorBracketMatch.background": "#ffffff16",
     // "editorBracketMatch.border": "#ffffff16",
     // "editorCodeLens.foreground": "#ffffff16",
-    // "editorCursor.foreground": "#c3e88d",
     // "editorError.foreground": "#ff647e",
     // "editorGroupHeader.tabsBorder": "#282828",
     // "editorGutter.addedBackground": "#c3e88db3",
@@ -550,7 +560,7 @@
       },
       {
         "scope": [
-          "storage.type.js",
+          "storage.type",
           "entity.name.tag"
         ],
         "settings": {
@@ -560,6 +570,7 @@
       {
         "scope": [
           "variable",
+          "meta.tag",
           "support.type.property-name",
           "support.type.property-name.css",
           "entity.other.attribute-name"
@@ -570,7 +581,7 @@
         }
       },
       {
-        "scope": "constant.numeric.decimal.js",
+        "scope": "constant.numeric",
         "settings": {
           "foreground": "#B5CEA8",
         }
@@ -618,6 +629,18 @@
         "scope": "meta.jsx.children.js",
         "settings": {
           "foreground": "#D4D4D4",
+        }
+      },
+      {
+        "scope": "punctuation.definition.list.begin.markdown",
+        "settings": {
+          "foreground": "#6796E6",
+        }
+      },
+      {
+        "scope": "meta.paragraph.markdown",
+        "settings": {
+          "foreground": "#CCCCCC",
         }
       },
     ]

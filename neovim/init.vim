@@ -11,8 +11,11 @@ set cursorline                                                                  
 set list                                                                        "空白文字を可視化
 set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%,space:･          "特殊文字
 
-" autocmd FocusGained * normal
-"autocmd WinEnter * hi NormalINC guibg='#27292d'
+autocmd FocusLost * echo "Focus Lost"
+autocmd FocusGained * echo "Focus Gained"
+" let &t_EI .= "\<Esc>[0 q"
+" let &t_SI .= "\<Esc>[6 q"
+
 
 let mapleader = "\<SPACE>"
 "let mapleader = ","
@@ -94,5 +97,4 @@ function! SynStack ()
         echo n1 "->" n2
     endfor
 endfunction
-
 
