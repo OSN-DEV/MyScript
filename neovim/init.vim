@@ -37,6 +37,7 @@ Plug 'https://github.com/vim-airline/vim-airline-themes'    "airlineのテーマ
 Plug 'https://github.com/preservim/nerdtree'                "ファイルツリー
 Plug 'https://github.com/jeetsukumaran/vim-buffergator'
 Plug 'tinyheero/vim-myhelp'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'Shougo/ddc.vim'
 " Plug 'vim-denops/denops.vim'
 call plug#end()
