@@ -75,6 +75,23 @@ let NERDTreeQuitOnOpen=3                                "フィアル・ブッ�
 noremap <Leader>o o<Esc>0"_D
 noremap <Leader>O O<Esc>0"_D
 noremap <Leader>d S<ESC>
+
+"" coc.nvim
+""" <Tab>で候補をナビゲート
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
+""" <Tab>で次、<S+Tab>で前
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+
 "検索対象のハイライトを消す
 noremap <Esc><Esc> :noh<CR>
 
