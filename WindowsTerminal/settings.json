@@ -48,6 +48,7 @@
                 "colorScheme": "One Half Dark",
                 "commandline": "E:\\Apps\\Develop\\Nushell\\nushell\\nu.exe",
                 "cursorShape": "vintage",
+                "cursorColor": "#9c9494",
                 "font": 
                 {
                     "face": "HackGenNerd Console",
