@@ -561,7 +561,8 @@
       {
         "scope": [
           "storage.type",
-          "entity.name.tag"
+          "entity.name.tag",
+          "constant.character",
         ],
         "settings": {
           "foreground": "#569CD6",
