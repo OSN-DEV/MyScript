@@ -1,5 +1,5 @@
 "===============================
-"basic setting
+
 language en_US                                                                  "表示言語を英語に設定
 set nu                                                                          "行番号を表示
 set guifont=HackGenNerd\ Console:h12                                            "フォント設定。半角スペースは\でエスケープ。フォントサイズは:h～で設定
@@ -29,37 +29,26 @@ set wrapscan                                                                    
 
 set termguicolors                                                                "ターミナルのvimでもtrue colorを使用する
 
+colorscheme osn
+
 "===============================
-"plugin 
+"plugin list
 call plug#begin('C:\Users\take\AppData\Local\nvim\plugged')
 Plug 'https://github.com/vim-airline/vim-airline'           "vimの上下に表示されるステータスバー的なもの
 Plug 'https://github.com/vim-airline/vim-airline-themes'    "airlineのテーマ
 Plug 'https://github.com/preservim/nerdtree'                "ファイルツリー
-Plug 'https://github.com/jeetsukumaran/vim-buffergator'
-Plug 'tinyheero/vim-myhelp'
+Plug 'https://github.com/jeetsukumaran/vim-buffergator'     "Bufferユーティリティ
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'Shougo/ddc.vim'
-" Plug 'vim-denops/denops.vim'
 call plug#end()
 
-
-
-
 "===============================
-"color theme
-colorscheme osn
-"colorscheme elly                                 "
-"colorscheme gruvbox                                 "
-
-
-
+" plugin setting
 "airlien
 "テーマの種類は以下のSSを参照
 "https://github.com/vim-airline/vim-airline/wiki/Screenshots
 let g:airline_theme = 'sol'                      "
 let g:airline#extensions#tabline#enabled = 1        "画面上部にバッファを表示
 let g:airline_powerline_fonts = 1                   "
-
 
 
 "NerdTree
@@ -69,12 +58,20 @@ noremap <C-n> :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen=3                                "フィアル・ブックマーク選択時にツリーを閉じる
 
 
+"buffergator
+let g:buffergator_viewport_split_policy="T"
+let g:buffergator_hsplit_size=10
+
+
+
 
 "===============================
 "original keymap
-noremap <Leader>o o<Esc>0"_D
+noremap <silent><Leader>o o<Esc>0"_D
 noremap <Leader>O O<Esc>0"_D
 noremap <Leader>d S<ESC>
+noremap <silent><Leader>c :bd<CR>
+
 
 "" coc.nvim
 """ <Tab>で候補をナビゲート
