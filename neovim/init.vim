@@ -2,6 +2,7 @@
 
 language en_US                                                                  "表示言語を英語に設定
 set nu                                                                          "行番号を表示
+"set number relativenumber                                                       "行番号を表示
 set guifont=HackGenNerd\ Console:h12                                            "フォント設定。半角スペースは\でエスケープ。フォントサイズは:h～で設定
 set clipboard+=unnamedplus                                                      "クリップボードをOSと共有する
 set expandtab                                                                   "Tabキーでスペースを挿入。無効にするにはset noexpandtabを実行
@@ -39,6 +40,9 @@ Plug 'https://github.com/vim-airline/vim-airline-themes'    "airlineのテーマ
 Plug 'https://github.com/preservim/nerdtree'                "ファイルツリー
 Plug 'https://github.com/jeetsukumaran/vim-buffergator'     "Bufferユーティリティ
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 "===============================
@@ -63,7 +67,20 @@ let g:buffergator_viewport_split_policy="T"
 let g:buffergator_hsplit_size=10
 
 
+" coc
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+let g:airline#extensions#coc#enabled = 0
+let airline#extensions#coc#error_symbol = 'Error:'
+let airline#extensions#coc#warning_symbol = 'Warning:'
+let airline#extensions#coc#stl_format_err = '%E{[%e(#%fe)]}'
+let airline#extensions#coc#stl_format_warn = '%W{[%w(#%fw)]}'
 
+" telescope
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader>fa <cmd>lua require('telescope.builtin').find_files( { cwd = vim.fn.expand('%:p:h') })<cr>
 
 "===============================
 "original keymap
@@ -71,7 +88,6 @@ noremap <silent><Leader>o o<Esc>0"_D
 noremap <Leader>O O<Esc>0"_D
 noremap <Leader>d S<ESC>
 noremap <silent><Leader>c :bd<CR>
-
 
 "" coc.nvim
 """ <Tab>で候補をナビゲート
@@ -100,6 +116,19 @@ if (&wrap ==1)
 else
     set wrap
 endif
+endfunction
+
+
+"Alt + nで折り返しの有無を切り替える
+noremap <A-n> :call ToggleNum()<CR>
+function ToggleNum()
+    if(&nu == 1)
+        set nu!
+        set rnu
+    else
+        set nornu
+        set nu
+    endif
 endfunction
 
 " ハイライトのグループ名を取得

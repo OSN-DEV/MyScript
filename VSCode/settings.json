@@ -103,7 +103,7 @@
     "disabledForeground": "#cccccc33",
     "widget.shadow": "#111111",
     "selection.background": "#82aaffb3",
-    "descriptionForeground": "#eeffff",
+    "descriptionForeground": "#808080",
     "errorForeground": "#ff647e",
     "icon.foreground": "#eeffffcc",
     "sash.hoverBorder": "#eeffff93",

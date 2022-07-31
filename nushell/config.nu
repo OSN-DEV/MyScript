@@ -17,7 +17,9 @@ let-env Path = ($env.Path | append "E:\\Apps\\Develop\\busybox")
 let-env Path = ($env.Path | append "E:\\Apps\\Text\\nvim\\nvim\\bin")
 let-env Path = ($env.Path | append "E:\\Apps\\Develop\\Nushell\\zoxide")
 let-env Path = ($env.Path | append "E:\\Apps\\Develop\\Python\\python-3.10.5-embed-amd64")
-let-env Path = ($env.Path | append "E:\\Apps\\Develop\\deno")
+let-env Path = ($env.Path | append "E:\\Apps\\Develop\\neovim\\plugin\\fd\\fd-v8.4.0-x86_64-pc-windows-msvc")
+let-env Path = ($env.Path | append "E:\\Apps\\Develop\\neovim\\plugin\\ripgrep\\ripgrep-13.0.0-x86_64-pc-windows-msvc")
+# let-env Path = ($env.Path | append "E:\\Apps\\Develop\\deno")
 # let-env Path = ($env.Path | append "E:\\Apps\\Develop\\oh-my-posh")
 
 
