@@ -1,8 +1,8 @@
 "===============================
 
 language en_US                                                                  "表示言語を英語に設定
-set nu                                                                          "行番号を表示
-"set number relativenumber                                                       "行番号を表示
+" set nu                                                                          "行番号を表示
+set number relativenumber                                                       "行番号を表示
 set guifont=HackGenNerd\ Console:h12                                            "フォント設定。半角スペースは\でエスケープ。フォントサイズは:h～で設定
 set clipboard+=unnamedplus                                                      "クリップボードをOSと共有する
 set expandtab                                                                   "Tabキーでスペースを挿入。無効にするにはset noexpandtabを実行
@@ -14,8 +14,6 @@ set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%,space:･   
 
 autocmd FocusLost * echo "Focus Lost"
 autocmd FocusGained * echo "Focus Gained"
-" let &t_EI .= "\<Esc>[0 q"
-" let &t_SI .= "\<Esc>[6 q"
 
 
 let mapleader = "\<SPACE>"

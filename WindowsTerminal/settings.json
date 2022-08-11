@@ -18,7 +18,8 @@
     "defaultProfile": "{2b372ca1-1ee2-403d-a839-6d63077ad871}",
     "experimental.rendering.forceFullRepaint": false,
     "experimental.rendering.software": false,
-    "initialPosition": "800,250",
+    "initialPosition": "800,150",
+    "initialRows": 40,
     "language": "en-US",
     "profiles": 
     {
@@ -47,8 +48,8 @@
                 "backgroundImageOpacity": 0.29999999999999999,
                 "colorScheme": "One Half Dark",
                 "commandline": "E:\\Apps\\Develop\\Nushell\\nushell\\nu.exe",
+                "cursorColor": "#9C9494",
                 "cursorShape": "vintage",
-                "cursorColor": "#9c9494",
                 "font": 
                 {
                     "face": "HackGenNerd Console",
