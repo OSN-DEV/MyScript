@@ -12,15 +12,15 @@ alias nvq = nvim-qt
 let-env Path = ($env.Path | append "D:\\NoInstall\\VisualStudioCode\\VSCode")
 let-env Path = ($env.Path | append "D:\\NoInstall\\vim\\vim")
 let-env Path = ($env.Path | append "D:\\NoInstall\\Node\\node")
-let-env Path = ($env.Path | append "E:\\Apps\\Develop\\Nushell\\starship")
 let-env Path = ($env.Path | append "E:\\Apps\\Develop\\busybox")
+let-env Path = ($env.Path | append "E:\\Apps\\Develop\\Nushell\\nushell")
 let-env Path = ($env.Path | append "E:\\Apps\\Text\\nvim\\nvim\\bin")
-let-env Path = ($env.Path | append "E:\\Apps\\Develop\\Nushell\\zoxide")
 let-env Path = ($env.Path | append "E:\\Apps\\Develop\\Python\\python-3.10.5-embed-amd64")
+let-env Path = ($env.Path | append "D:\\NoInstall\\lua\\lua")
+let-env Path = ($env.Path | append "D:\\NoInstall\\lua\\lua-language-server-3.5.3-win32-x64\\bin")
+let-env Path = ($env.Path | append "D:\\NoInstall\\mingw\\mingw64\\bin")
 let-env Path = ($env.Path | append "E:\\Apps\\Develop\\neovim\\plugin\\fd\\fd-v8.4.0-x86_64-pc-windows-msvc")
 let-env Path = ($env.Path | append "E:\\Apps\\Develop\\neovim\\plugin\\ripgrep\\ripgrep-13.0.0-x86_64-pc-windows-msvc")
-# let-env Path = ($env.Path | append "E:\\Apps\\Develop\\deno")
-# let-env Path = ($env.Path | append "E:\\Apps\\Develop\\oh-my-posh")
 
 
 # ##############################################
@@ -304,7 +304,7 @@ let-env config = {
   quick_completions: true  # set this to false to prevent auto-selecting completions when only one remains
   partial_completions: true  # set this to false to prevent partial filling of the prompt
   completion_algorithm: "prefix"  # prefix, fuzzy
-  animate_prompt: false # redraw the prompt every second
+  # animate_prompt: false # redraw the prompt every second
   float_precision: 2
   # buffer_editor: "emacs" # command that will be used to edit the current line buffer with ctrl+o, if unset fallback to $env.EDITOR and $env.VISUAL
   use_ansi_coloring: true
