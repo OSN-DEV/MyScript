@@ -59,6 +59,12 @@ RShift & x::RunOrActivate("Code.exe", "D:\NoInstall\VisualStudioCode\VSCode\Code
 ; Numpad3::RunOrActivate("GomiHtml.exe", "E:\UserData\app\dotnet\GomiHTML\bin\Debug\GomiHtml.exe")
 RShift & c::RunOrActivate("GomiHtml.exe", "E:\UserData\app\dotnet\GomiHTML\bin\Debug\GomiHtml.exe")
 
+; MyMarkdownViewer(RShift + a)
+RShift & a::RunOrActivate("MyMarkdownViewer.exe", "E:\UserData\app\dotnet\★archive\MyMarkdownViewer\src\bin\Debug\MyMarkdownViewer.exe")
+
+; chrome
+RShift & v::RunOrActivate("chrome.exe", "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe")
+
 ; Q-Dir(Ctrl + Alt + Space)
 Numpad4::RunOrActivate("Q-Dir_x64.exe", "D:\NoInstall\Q-Dir\Q-Dir\Q-Dir_x64.exe")
 ^!Space::ToggleApp("Q-Dir_x64.exe", "D:\NoInstall\Q-Dir\Q-Dir\Q-Dir_x64.exe")

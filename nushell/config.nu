@@ -28,7 +28,7 @@ let-env Path = ($env.Path | append "E:\\Apps\\Develop\\neovim\\plugin\\ripgrep\\
 # vim related
 let nv = {
     setting-path: "C:\\Users\\take\\AppData\\Local\\nvim"
-    init-vim: "C:\\Users\\take\\AppData\\Local\\nvim\\init.vim"
+    init-lua: "C:\\Users\\take\\AppData\\Local\\nvim\\init.lua"
     elly-git: "C:\\Users\\take\\AppData\\Local\\nvim\\plugged\\elly.vim"
     elly-vim: "C:\\Users\\take\\AppData\\Local\\nvim\\plugged\\elly.vim\\colors\\elly.vim"
     osn-git: "C:\\Users\\take\\AppData\\Local\\nvim\\colors"
