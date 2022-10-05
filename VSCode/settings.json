@@ -147,14 +147,9 @@
     "inputValidation.infoBackground": "#eeffffaa",
     "inputValidation.infoForeground": "#4e2626",
     "inputValidation.infoBorder": "#d7ce93",
-    "inputValidation.warningForeground": "#0000ff",
-    "inputValidation.warningBorder": "#0000ff",
-
-
-    // "inputValidation.errorBackground": "#1e1e1e",
-    // "inputValidation.errorBorder": "#ff0f38",
-    // "inputValidation.warningBackground": "#1e1e1e",
-    // "inputValidation.warningBorder": "#ffb223",
+    "inputValidation.warningForeground": "#cc5f5f",
+    "inputValidation.warningBorder": "#ffb223",
+    "inputValidation.warningBackground": "#1e1e1e",
 
     // 
     // ################################################################
