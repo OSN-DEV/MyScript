@@ -13,6 +13,20 @@ return
 ; --------------------------------------------------
 ^+!R::Reload
 ^+!E::Edit
+,
+; --------------------------------------------------
+; HHKBライクなキーマッピング
+; --------------------------------------------------
+; sc07B & l::SendInput, {Enter}
+; sc07B & j::SendInput, {Home}
+; sc07B & k::SendInput, {End}
+; sc07B & n::SendInput, {Delete}
+; sc07B & m::SendInput, {BackSpace}
+; sc07B & .::SendInput, {Tab}
+
+
+
+
 
 
 ; --------------------------------------------------
@@ -133,8 +147,20 @@ return
     MouseMove, %x%, %y%
     return
 
+^!sc028::MouseClick, Left,,,,,D      ; 左クリック(Ctrl + Alt + :)
+^!sc028 UP::MouseClick, Left,,,,,U
+^!]::MouseClick, Right            ; 右クリック(Ctrl + Alt + ])
 
-    return
+^!Up::MouseMove 0, -10, 0, R      ; カーソルを上に移動(Ctlr + Alt + ↑)
+^+!Up::MouseMove 0, -50, 0, R     ; カーソルを上に移動(Ctlr + Shift + Alt + ↑)
+^!Down::MouseMove 0, 10, 0, R     ; カーソルを上に移動(Ctlr + Alt + ↓)
+^+!Down::MouseMove 0, 50, 0, R    ; カーソルを上に移動(Ctlr + Shift + Alt + ↓)
+^!Left::MouseMove -10, 0, 0, R    ; カーソルを左に移動(Ctlr + Shift + Alt + ←)
+^+!Left::MouseMove -50, 0, 0, R   ; カーソルを左に移動(Ctlr + Shift + Shift + Alt + ←)
+^!Right::MouseMove 10, 0, 0, R    ; カーソルを右に移動(Ctlr + Alt + →)
+^+!Right::MouseMove 50, 0, 0, R   ; カーソルを右に移動(Ctlr + Shif + Alt + →)
+
+
 ; --------------------------------------------------
 ; ウィンドウ
 ; --------------------------------------------------

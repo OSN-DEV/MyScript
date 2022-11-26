@@ -2,7 +2,7 @@
   "title": "独自キー",
   "rules": [
     {
-      "description": "英数コンビネーション",
+      "description": "英数コンビネーション ver2022.11.26" ,
       "manipulators": [
         {
             "description": "英数をファンクションキー化",
@@ -88,6 +88,20 @@
             "type": "basic",
             "from":{"key_code":"m", "modifiers":{"optional":["any"]}},
             "to": [{"key_code": "delete_or_backspace"}],
+            "conditions":[{"type":"variable_if", "name": "eisu_key", "value": 1}]
+        },
+        {
+            "description": "Eisu + C => [",
+            "type": "basic",
+            "from":{"key_code":"c", "modifiers":{"optional":["any"]}},
+            "to": [{"key_code": "open_bracket"}],
+            "conditions":[{"type":"variable_if", "name": "eisu_key", "value": 1}]
+        },
+        {
+            "description": "Eisu + V => ]",
+            "type": "basic",
+            "from":{"key_code":"v", "modifiers":{"optional":["any"]}},
+            "to": [{"key_code": "close_bracket"}],
             "conditions":[{"type":"variable_if", "name": "eisu_key", "value": 1}]
         }
       ]
