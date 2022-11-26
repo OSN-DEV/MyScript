@@ -91,17 +91,45 @@
             "conditions":[{"type":"variable_if", "name": "eisu_key", "value": 1}]
         },
         {
+            "description": "Eisu + A => @",
+            "type": "basic",
+            "from":{"key_code":"a", "modifiers":{"optional":["any"]}},
+            "to": [{"key_code": "open_bracket"}],
+            "conditions":[{"type":"variable_if", "name": "eisu_key", "value": 1}]
+        },
+        {
+            "description": "Eisu + S => ^",
+            "type": "basic",
+            "from":{"key_code":"s", "modifiers":{"optional":["any"]}},
+            "to": [{"key_code": "equal_sign"}],
+            "conditions":[{"type":"variable_if", "name": "eisu_key", "value": 1}]
+        },
+        {
+            "description": "Eisu + D => ¥",
+            "type": "basic",
+            "from":{"key_code":"d", "modifiers":{"optional":["any"]}},
+            "to": [{"key_code": "international3"}],
+            "conditions":[{"type":"variable_if", "name": "eisu_key", "value": 1}]
+        },
+        {
+            "description": "Eisu + F => :",
+            "type": "basic",
+            "from":{"key_code":"f", "modifiers":{"optional":["any"]}},
+            "to": [{"key_code": "quote"}],
+            "conditions":[{"type":"variable_if", "name": "eisu_key", "value": 1}]
+        },
+        {
             "description": "Eisu + C => [",
             "type": "basic",
             "from":{"key_code":"c", "modifiers":{"optional":["any"]}},
-            "to": [{"key_code": "open_bracket"}],
+            "to": [{"key_code": "close_bracket"}],
             "conditions":[{"type":"variable_if", "name": "eisu_key", "value": 1}]
         },
         {
             "description": "Eisu + V => ]",
             "type": "basic",
             "from":{"key_code":"v", "modifiers":{"optional":["any"]}},
-            "to": [{"key_code": "close_bracket"}],
+            "to": [{"key_code": "backslash"}],
             "conditions":[{"type":"variable_if", "name": "eisu_key", "value": 1}]
         }
       ]
