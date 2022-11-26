@@ -89,8 +89,14 @@
             "from":{"key_code":"l", "modifiers":{"optional":["any"]}},
             "to": [{"key_code": "p"}],
             "conditions":[{"type":"variable_if", "name": "kana_key", "value": 1}]
-        }
-      ]
+        },
+        {
+            "description": "Kana + ; => -",
+            "type": "basic",
+            "from":{"key_code":"semicolon", "modifiers":{"optional":["any"]}},
+            "to": [{"key_code": "hyphen"}],
+            "conditions":[{"type":"variable_if", "name": "kana_key", "value": 1}]
+        }      ]
     }
   ]
 }
