@@ -648,4 +648,5 @@
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
+  "explorer.compactFolders": false,
 }
