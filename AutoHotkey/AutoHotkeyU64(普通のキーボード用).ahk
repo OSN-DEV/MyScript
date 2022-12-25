@@ -114,14 +114,14 @@ sc07B & p::
         Send, {Right}
     }
     return
-sc07B & ,::
+sc07B & .::,
     if IsShiftPressed() { 
         Send, +{Tab} 
     } else { 
         Send, {Tab}
     }
     return
-
+;sc07B & .::SendInput, {Tab}
 sc07B::SendInput, {sc07B}
 
 
