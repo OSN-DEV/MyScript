@@ -1,0 +1,180 @@
+{
+  "main": {
+    "id": "46d405d721af6964",
+    "type": "split",
+    "children": [
+      {
+        "id": "69b477f7ef097f61",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2761e40c43c71e2c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled 1.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "625e2a73c4e68935",
+    "type": "split",
+    "children": [
+      {
+        "id": "fdac62db79de477a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c592be57fec267ed",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "859015e4e0266f58",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:aaa",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "5023a3dd505db39c",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "9f047428a2614d09",
+            "type": "leaf",
+            "state": {
+              "type": "tagfolder-view",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 299.5
+  },
+  "right": {
+    "id": "e6b26301bc4b2db2",
+    "type": "split",
+    "children": [
+      {
+        "id": "c772d42f0da44b70",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ad7fe4ee1b76992f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Untitled 1.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4c61d520243385df",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Untitled 1.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "bddeba5035176cce",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": false
+              }
+            }
+          },
+          {
+            "id": "6ef951f57be3f2bf",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Untitled 1.md"
+              }
+            }
+          },
+          {
+            "id": "b73289dcb4772ef4",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "canvas:Create new canvas": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-daily-notes-viewer:Open Viewer": false
+    }
+  },
+  "active": "2761e40c43c71e2c",
+  "lastOpenFiles": [
+    "05.png",
+    "Untitled 1.md",
+    "04_Templates/Daily_Template.md",
+    "01_Inbox/bbb.md",
+    "Tags.md",
+    "Untitled.md",
+    "Viewer.md",
+    "inbox.md",
+    "01_Inbox/ccc.md",
+    "01_Inbox/aaa.md"
+  ]
+}

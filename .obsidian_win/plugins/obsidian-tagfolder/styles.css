@@ -1,0 +1,6 @@
+.workspace-leaf-content[data-type="tagfolder-view"] > .view-content,
+.workspace-leaf-content[data-type="tagfolder-view-list"] > .view-content {
+	padding: 0;
+	height: 100%;
+	overflow: unset;
+}

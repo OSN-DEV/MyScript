@@ -1,0 +1,41 @@
+{
+  "choices": [
+    {
+      "id": "f3fb6629-413f-4879-932e-d4f39e72a2b3",
+      "name": "QuickText",
+      "type": "Capture",
+      "command": true,
+      "appendLink": false,
+      "captureTo": "02_Daily/{{DATE}}.md",
+      "captureToActiveFile": false,
+      "createFileIfItDoesntExist": {
+        "enabled": true,
+        "createWithTemplate": true,
+        "template": "04_Templates/Daily_Template.md"
+      },
+      "format": {
+        "enabled": true,
+        "format": "### {{DATE: HH:mm}} {{VALUE}}"
+      },
+      "insertAfter": {
+        "enabled": false,
+        "after": "",
+        "insertAtEnd": false,
+        "createIfNotFound": false,
+        "createIfNotFoundLocation": "top"
+      },
+      "prepend": true,
+      "task": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": false,
+      "openFileInMode": "default"
+    }
+  ],
+  "macros": [],
+  "inputPrompt": "multi-line",
+  "devMode": false
+}
