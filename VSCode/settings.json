@@ -650,4 +650,6 @@
   },
   "explorer.compactFolders": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "prettier.printWidth": 180,
 }

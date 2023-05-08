@@ -49,7 +49,7 @@ F12 & y::SendInputKey(6, "&")               ; 6
 F12 & u::SendInputKey(7, "'")               ; 7
 F12 & i::SendInputKey(8, "(")               ; 8
 F12 & o::SendInputKey(9, ")")               ; 9
-F12 & p::SendInputKey(0, "")                ; 0
+F12 & p::SendInputKey(0, "を")                ; 0
 F12 & `;::SendInputKey("-", "=")            ;  
 F12 & l::SendInputKey("p", "P")               ; p
 F12 & 0::
@@ -84,7 +84,7 @@ Numpad4::RunOrActivate("Q-Dir_x64.exe", "D:\NoInstall\Q-Dir\Q-Dir\Q-Dir_x64.exe"
 ^!Space::ToggleApp("Q-Dir_x64.exe", "D:\NoInstall\Q-Dir\Q-Dir\Q-Dir_x64.exe")
 
 ; word(Ctrl + Shift + Alt + W)
-^+!W::Run, "F:\OneDrive\Business\OneDrive - PrivateSpace\00.inbox\下書き.docx"
+^+!W::Run, "F:\OneDrive\Business\OneDrive - PrivateSpace\00.inbox\下書き.md"
 
 ; gvim(Ctrl + Shift + Alt + G)
 ;^+!G::RunOrActivate("gvim.exe", "D:\NoInstall\vim\vim\gvim.exe")
