@@ -8,11 +8,15 @@
             {
                 "action": "quakeMode"
             },
-            "keys": "ctrl+shift+@"
+            "keys": "ctrl+alt+shift+@"
         },
         {
             "command": "unbound",
             "keys": "win+sc(41)"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+@"
         }
     ],
     "defaultProfile": "{2b372ca1-1ee2-403d-a839-6d63077ad871}",
@@ -93,12 +97,6 @@
                 "hidden": false,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
-            },
-            {
-                "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
-                "hidden": false,
-                "name": "Ubuntu-20.04",
-                "source": "Windows.Terminal.Wsl"
             },
             {
                 "guid": "{b8fbf6d2-be62-555b-99c3-002937b97133}",
