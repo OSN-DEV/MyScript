@@ -20,3 +20,15 @@ keymap.set('n', '<Leader>O', 'O<ESC>')
 keymap.set('n', '<Leader>d', 'S<ESC>')
 keymap.set('', '<Leader>d', 'S<ESC>')
 keymap.set('n', '<ESC><ESC>', ':noh<CR>', { silent = true })
+
+-- toggle setting
+
+local toggleNum = function()
+  vim.wo.relativenumber = not (vim.wo.relativenumber)
+end
+keymap.set('n', '<A-n>', toggleNum)
+
+local toggleWrap = function()
+  vim.wo.wrap = not (vim.wo.wrap)
+end
+keymap.set('n', '<A-z>', toggleWrap)
