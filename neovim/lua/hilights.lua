@@ -1,3 +1,6 @@
+-- lua-vim-options
+-- set numberとかのオプション類
+
 vim.opt.cursorline = true     -- カレント行の強調
 vim.opt.termguicolors = true  -- trueにするとguifg/guibgのみ使用される(guiは使用されずctermの指定が有効になる)
 vim.opt.winblend = 0          -- ウィンドウの透過
