@@ -8,12 +8,14 @@ GetMonitorInfo(1, monitorLWidth, monitorLHeight, monitorLOriginX)
 GetMonitorInfo(2, monitorRWidth, monitorRHeight, monitorROriginX)
 return
 
+
 ; --------------------------------------------------
 ; スクリプトのリロード・編集
 ; --------------------------------------------------
 ^+!R::Reload
 ^+!E::Edit
-,
+
+
 ; --------------------------------------------------
 ; HHKBライクなキーマッピング
 ; --------------------------------------------------
@@ -25,33 +27,34 @@ return
 ; sc07B & .::SendInput, {Tab}
 
 
-
-
-
-
 ; --------------------------------------------------
 ; キー送信
 ; --------------------------------------------------
-Numpad5::SendInput, !{Tab}                  ; Alt + Tab
-Numpad6::SendInput, !{PrintScreen}          ; Alt + PrintScreen
-Numpad7::SendInput, !{F4}                   ; Alt + F4
-Numpad9::SendInput, ^{F4}                   ; Ctrl + F4
-RShift & s::SendInput, !{Tab}               ; Alt + Tab
-RShift & d::SendInput, !{PrintScreen}       ; Alt + PrintScreen
-RShift & q::SendInput, !{F4}                ; Alt + F4
-RShift & e::SendInput, ^{F4}                ; Ctrl + F4
-F12 & q::SendInputKey(1, "!")               ; 1
-F12 & w::SendInputKey(2, """")              ; 2
-F12 & e::SendInputKey(3, "#")               ; 3
-F12 & r::SendInputKey(4, "$")               ; 4
-F12 & t::SendInputKey(5, "%")               ; 5
-F12 & y::SendInputKey(6, "&")               ; 6
-F12 & u::SendInputKey(7, "'")               ; 7
-F12 & i::SendInputKey(8, "(")               ; 8
-F12 & o::SendInputKey(9, ")")               ; 9
-F12 & p::SendInputKey(0, "を")                ; 0
-F12 & `;::SendInputKey("-", "=")            ;  
-F12 & l::SendInputKey("p", "P")               ; p
+; テンキー
+Numpad5::SendInput, !{Tab}                  ; Alt + Tab(テンキー５)
+Numpad6::SendInput, !{PrintScreen}          ; Alt + PrintScreen(テンキー６)
+Numpad7::SendInput, !{F4}                   ; Alt + F4(テンキー７)
+Numpad9::SendInput, ^{F4}                   ; Ctrl + F4(テンキー９)
+
+; 右シフト
+RShift & s::SendInput, !{Tab}               ; Alt + Tab(Shift + s)
+RShift & d::SendInput, !{PrintScreen}       ; Alt + PrintScreen(Shift + d)
+RShift & q::SendInput, !{F4}                ; Alt + F4(Shift + q)
+RShift & e::SendInput, ^{F4}                ; Ctrl + F4(Shift + e)
+
+; F12
+F12 & q::SendInputKey(1, "!")               ; 1(F12+q)
+F12 & w::SendInputKey(2, """")              ; 2(F12+w)
+F12 & e::SendInputKey(3, "#")               ; 3(F12+e)
+F12 & r::SendInputKey(4, "$")               ; 4(F12+r)
+F12 & t::SendInputKey(5, "%")               ; 5(F12+t)
+F12 & y::SendInputKey(6, "&")               ; 6(F12+y)
+F12 & u::SendInputKey(7, "'")               ; 7(F12+u)
+F12 & i::SendInputKey(8, "(")               ; 8(F12+i)
+F12 & o::SendInputKey(9, ")")               ; 9(F12+o)
+F12 & p::SendInputKey(0, "を")              ; 0(F12+p)
+F12 & `;::SendInputKey("-", "=")            ; -(F12+-)
+F12 & l::SendInputKey("p", "P")             ; p(F12+p)
 F12 & 0::
     WinMove, A,,,, 1400, 800
     return
@@ -60,17 +63,13 @@ F12 & 0::
 ; --------------------------------------------------
 ; アプリ起動
 ; --------------------------------------------------
-
-; Viewer(Tenkey 1)
-; Numpad1::RunOrActivate("MyHolizontalBookViewerLight.exe", "E:\UserData\app\dotnet\MyHolizontalBookViewerLight\src\bin\Debug\MyHolizontalBookViewerLight.exe")
+; HorizontalBook
 RShift & z::RunOrActivate("MyHolizontalBookViewerLight.exe", "E:\UserData\app\dotnet\MyHolizontalBookViewerLight\src\bin\Debug\MyHolizontalBookViewerLight.exe")
 
 ; VSCode(Tenkey 2)
-; Numpad2::RunOrActivate("Code.exe", "D:\NoInstall\VisualStudioCode\VSCode\Code.exe")
 RShift & x::RunOrActivate("Code.exe", "D:\NoInstall\VisualStudioCode\VSCode\Code.exe")
 
 ; GomiHTML(Tenkey 3)
-; Numpad3::RunOrActivate("GomiHtml.exe", "E:\UserData\app\dotnet\GomiHTML\bin\Debug\GomiHtml.exe")
 RShift & c::RunOrActivate("GomiHtml.exe", "E:\UserData\app\dotnet\GomiHTML\bin\Debug\GomiHtml.exe")
 
 ; MyMarkdownViewer(RShift + a)
@@ -96,6 +95,8 @@ Numpad4::RunOrActivate("Q-Dir_x64.exe", "D:\NoInstall\Q-Dir\Q-Dir\Q-Dir_x64.exe"
 ; ^+!Space::ToggleApp("ConEmu64.exe", "D:\NoInstall\Cmder\mini\Cmder.exe")
 ;^+!Space::ToggleApp("WindowsTerminal.exe", "WT")
 ^+!Space::RunOrActivate("WindowsTerminal.exe", "WT")
+
+
 
 
 ; --------------------------------------------------
