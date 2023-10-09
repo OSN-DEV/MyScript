@@ -7,7 +7,7 @@
   "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-、。「」【】『』（）！？／ てにをはがのともへでや",
   "editor.renderWhitespace": "all",
   "workbench.iconTheme": "eq-material-theme-icons",
-  "editor.fontFamily": "Consolas,'Myrica M', 'Meiryo UI', 'Courier New', monospace",
+  "editor.fontFamily": "'HackGenNerd Console',Consolas,'Myrica M', 'Meiryo UI', 'Courier New', monospace",
   "html.autoClosingTags": false,
   "editor.autoIndent": "brackets",
   "editor.autoClosingQuotes": "never",
@@ -57,11 +57,6 @@
   "terminal.integrated.tabs.enabled": true,
   "alt-editor.terminal": false,
   "terminal.integrated.profiles.windows": {
-    "nu": {
-      "path": [
-        "E:\\Apps\\Develop\\Nushell\\nushell\\nu.exe"
-      ],
-    },
     "PowerShell": {
       "source": "PowerShell"
     },
@@ -79,6 +74,11 @@
     },
     "Git Bash": {
       "source": "Git Bash"
+    },
+    "nu": {
+      "path": [
+        "E:\\Apps\\Develop\\Nushell\\nushell\\nu.exe"
+      ],
     },
   },
   "terminal.integrated.fontFamily": "HackGenNerd Console",
@@ -657,5 +657,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "prettier.printWidth": 180,
+  "terminal.integrated.fontSize": 16,
   "terminal.integrated.defaultLocation": "editor",
+  "terminal.external.windowsExec": "E:\\Apps\\Develop\\Nushell\\nushell\\nu.exe",
 }
