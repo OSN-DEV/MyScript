@@ -81,7 +81,7 @@
       ],
     },
   },
-  "terminal.integrated.fontFamily": "HackGenNerd Console",
+  "terminal.integrated.fontFamily": "Consolas,'Myrica M', HackGenNerd Console",
   "terminal.integrated.defaultProfile.windows": "nu",
   "editor.cursorStyle": "line",
   "editor.lineNumbers": "on",

@@ -47,7 +47,7 @@ let bm = {
     study: "F:\\inbox\\study",
     my-app: "E:\\UserData\\app",
     my-style: "E:\\UserData\\app\\others\\MyStyle",
-    current-app: "E:\\UserData\\app\\electron\\MyPhraseFlashCards"
+    current-app: "E:\\UserData\\app\\electron\\MyExercise"
 }
 
 # ##############################################
