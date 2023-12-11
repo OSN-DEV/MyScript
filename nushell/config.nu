@@ -9,6 +9,7 @@ alias nvq = nvim-qt
 
 # ##############################################
 # app path
+let-env Path = ($env.Path | append "C:\\Users\\take\\AppData\\Roaming\\nushell")
 let-env Path = ($env.Path | append "D:\\NoInstall\\VisualStudioCode\\VSCode")
 let-env Path = ($env.Path | append "D:\\NoInstall\\vim\\vim")
 let-env Path = ($env.Path | append "D:\\NoInstall\\Node\\node")
@@ -47,7 +48,8 @@ let bm = {
     study: "F:\\inbox\\study",
     my-app: "E:\\UserData\\app",
     my-style: "E:\\UserData\\app\\others\\MyStyle",
-    current-app: "E:\\UserData\\app\\electron\\MyExercise"
+    current-app: "E:\\UserData\\app\\electron\\MyExplorer\\src",
+    daily: "F:\\OneDrive\\Business\\OneDrive - PrivateSpace\\02.area\\diary\\202312"
 }
 
 # ##############################################

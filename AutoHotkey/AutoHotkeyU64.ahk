@@ -12,102 +12,44 @@ return
 ; --------------------------------------------------
 ; スクリプトのリロード・編集
 ; --------------------------------------------------
-^+!R::Reload
-^+!E::Edit
-
-
-; --------------------------------------------------
-; HHKBライクなキーマッピング
-; --------------------------------------------------
-; sc07B & l::SendInput, {Enter}
-; sc07B & j::SendInput, {Home}
-; sc07B & k::SendInput, {End}
-; sc07B & n::SendInput, {Delete}
-; sc07B & m::SendInput, {BackSpace}
-; sc07B & .::SendInput, {Tab}
+^+!R::Reload            ; Ctrl + Shift + Alt + r
+^+!E::Edit              ; Ctrl + Shift + Alt + e
 
 
 ; --------------------------------------------------
 ; キー送信
 ; --------------------------------------------------
-; テンキー
-Numpad5::SendInput, !{Tab}                  ; Alt + Tab(テンキー５)
-Numpad6::SendInput, !{PrintScreen}          ; Alt + PrintScreen(テンキー６)
-Numpad7::SendInput, !{F4}                   ; Alt + F4(テンキー７)
-Numpad9::SendInput, ^{F4}                   ; Ctrl + F4(テンキー９)
-
 ; 右シフト
 RShift & s::SendInput, !{Tab}               ; Alt + Tab(Shift + s)
-RShift & d::SendInput, !{PrintScreen}       ; Alt + PrintScreen(Shift + d)
-RShift & q::SendInput, !{F4}                ; Alt + F4(Shift + q)
-RShift & e::SendInput, ^{F4}                ; Ctrl + F4(Shift + e)
+
 
 ; F12
-F12 & q::SendInputKey(1, "!")               ; 1(F12+q)
-F12 & w::SendInputKey(2, """")              ; 2(F12+w)
-F12 & e::SendInputKey(3, "#")               ; 3(F12+e)
-F12 & r::SendInputKey(4, "$")               ; 4(F12+r)
-F12 & t::SendInputKey(5, "%")               ; 5(F12+t)
-F12 & y::SendInputKey(6, "&")               ; 6(F12+y)
-F12 & u::SendInputKey(7, "'")               ; 7(F12+u)
-F12 & i::SendInputKey(8, "(")               ; 8(F12+i)
-F12 & o::SendInputKey(9, ")")               ; 9(F12+o)
-F12 & p::SendInputKey(0, "を")              ; 0(F12+p)
-F12 & `;::SendInputKey("-", "=")            ; -(F12+-)
-F12 & l::SendInputKey("p", "P")             ; p(F12+p)
-F12 & 0::
-    WinMove, A,,,, 1400, 800
-    return
+;F12 & 0::
+;    WinMove, A,,,, 1400, 800
+;    return
 
 
 ; --------------------------------------------------
 ; アプリ起動
 ; --------------------------------------------------
-; HorizontalBook
+; HorizontalBook(RShift + z)
 RShift & z::RunOrActivate("MyHolizontalBookViewerLight.exe", "E:\UserData\app\dotnet\MyHolizontalBookViewerLight\src\bin\Debug\MyHolizontalBookViewerLight.exe")
 
-; VSCode(Tenkey 2)
+; VSCode(RShift + x)
 RShift & x::RunOrActivate("Code.exe", "D:\NoInstall\VisualStudioCode\VSCode\Code.exe")
 
-; GomiHTML(Tenkey 3)
+; GomiHTML(RShift + C)
 RShift & c::RunOrActivate("GomiHtml.exe", "E:\UserData\app\dotnet\GomiHTML\bin\Debug\GomiHtml.exe")
 
-; MyMarkdownViewer(RShift + a)
-RShift & a::RunOrActivate("MyMarkdownViewer.exe", "E:\UserData\app\dotnet\★archive\MyMarkdownViewer\src\bin\Debug\MyMarkdownViewer.exe")
-
-; chrome
-RShift & v::RunOrActivate("chrome.exe", "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe")
-
-; Q-Dir(Ctrl + Alt + Space)
-Numpad4::RunOrActivate("Q-Dir_x64.exe", "D:\NoInstall\Q-Dir\Q-Dir\Q-Dir_x64.exe")
-^!Space::ToggleApp("Q-Dir_x64.exe", "D:\NoInstall\Q-Dir\Q-Dir\Q-Dir_x64.exe")
-
-; word(Ctrl + Shift + Alt + W)
-^+!W::Run, "F:\OneDrive\Business\OneDrive - PrivateSpace\00.inbox\下書き.md"
-
-; gvim(Ctrl + Shift + Alt + G)
-;^+!G::RunOrActivate("gvim.exe", "D:\NoInstall\vim\vim\gvim.exe")
-; neovim(Ctrl + Shift + Alt + G)
-^+!G::RunOrActivate("nvim-qt.exe", "E:\Apps\Text\nvim\v0.7.0\bin\nvim-qt.exe")
-
-
-; cmder(Ctrl + Shift + Alt + Space)
-; ^+!Space::ToggleApp("ConEmu64.exe", "D:\NoInstall\Cmder\mini\Cmder.exe")
-;^+!Space::ToggleApp("WindowsTerminal.exe", "WT")
+; terminal(Ctrl + Shift + Alt + Space)
 ^+!Space::RunOrActivate("WindowsTerminal.exe", "WT")
 
-
-
+; 下書き用テキスト
+^+!W::Run, "F:\OneDrive\Business\OneDrive - PrivateSpace\00.inbox\下書き.md"
 
 ; --------------------------------------------------
 ; マウス
 ; --------------------------------------------------
-; マウスホイール
-AppsKey & 7::WheelMouse("WheelLeft")
-AppsKey & 8::WheelMouse("WheelDown")
-AppsKey & 9::WheelMouse("WheelUp")
-AppsKey & 0::WheelMouse("WheelRight")
-
 ; マウスカーソルの移動
 ^!U::MoveCursor("LEFTTOP")          ; 左上に移動(Ctrl + Alt + U)
 ^!J::MoveCursor("LEFTCENTER")       ; 左中央に移動(Ctrl + Alt + J)
@@ -129,37 +71,19 @@ AppsKey & 0::WheelMouse("WheelRight")
     MouseMove, %newX%, %newY%
 return
 
-; マウスカーソルを反対のモニタに移動(Ctrl + Alt + ;)
-^!;::
-    global monitorROriginX
-    global monitorLWidth
-    global monitorRWidth
-    global monitorLHeight
-    global monitorRHeight
-
-    index := GetCurrentMonitorIndexBaseOnMouse()
-    monitorX := (index == 1) ? monitorROriginX : monitorLOriginX
-    monitorWidth := (index == 1) ? monitorRWidth : monitorLWidth
-    monitorHeight := (index == 1) ? monitorRHeight : monitorLHeight
- 
-    CoordMode, Mouse,Screen
-    x := monitorX + (monitorWidth / 2)
-    y := monitorHeight / 2
-    MouseMove, %x%, %y%
-    return
 
 ^!sc028::MouseClick, Left,,,,,D      ; 左クリック(Ctrl + Alt + :)
 ^!sc028 UP::MouseClick, Left,,,,,U
 ^!]::MouseClick, Right            ; 右クリック(Ctrl + Alt + ])
 
-^!Up::MouseMove 0, -10, 0, R      ; カーソルを上に移動(Ctlr + Alt + ↑)
-^+!Up::MouseMove 0, -50, 0, R     ; カーソルを上に移動(Ctlr + Shift + Alt + ↑)
-^!Down::MouseMove 0, 10, 0, R     ; カーソルを上に移動(Ctlr + Alt + ↓)
-^+!Down::MouseMove 0, 50, 0, R    ; カーソルを上に移動(Ctlr + Shift + Alt + ↓)
-^!Left::MouseMove -10, 0, 0, R    ; カーソルを左に移動(Ctlr + Shift + Alt + ←)
-^+!Left::MouseMove -50, 0, 0, R   ; カーソルを左に移動(Ctlr + Shift + Shift + Alt + ←)
-^!Right::MouseMove 10, 0, 0, R    ; カーソルを右に移動(Ctlr + Alt + →)
-^+!Right::MouseMove 50, 0, 0, R   ; カーソルを右に移動(Ctlr + Shif + Alt + →)
+^!Up::MouseMove 0, -10, 0, R      ; カーソルを上に移動(Ctrl + Alt + ↑)
+^+!Up::MouseMove 0, -50, 0, R     ; カーソルを上に移動(Ctrl + Shift + Alt + ↑)
+^!Down::MouseMove 0, 10, 0, R     ; カーソルを上に移動(Ctrl + Alt + ↓)
+^+!Down::MouseMove 0, 50, 0, R    ; カーソルを上に移動(Ctrl + Shift + Alt + ↓)
+^!Left::MouseMove -10, 0, 0, R    ; カーソルを左に移動(Ctrl + Shift + Alt + ←)
+^+!Left::MouseMove -50, 0, 0, R   ; カーソルを左に移動(Ctrl + Shift + Shift + Alt + ←)
+^!Right::MouseMove 10, 0, 0, R    ; カーソルを右に移動(Ctrl + Alt + →)
+^+!Right::MouseMove 50, 0, 0, R   ; カーソルを右に移動(Ctrl + Shift + Alt + →)
 
 
 ; --------------------------------------------------
@@ -234,19 +158,6 @@ return
     WinMove, A,, %x%, %y%, %w%, %h% 
 return
 
-; ウィンドウの幅を半分にして左右に配置(Win + ←・→)
-#Left::
-GetCurrentMonitorInfo(ml, mw, mh)
-w := mw / 2
-WinMove, A,, %ml%, 0, %w%, %mh%     ; ここで計算式を入れると微妙にずれるので事前に計算しておく
-return
-
-#Right::
-GetCurrentMonitorInfo(ml, mw, mh)
-left := ml + (mw / 2)
-w := mw / 2
-WinMove, A,, %left%, 0, %w%, %mh%
-return
 
 
 ; ウィンドウを反対のモニタの中央に配置(Shift + Win + U)

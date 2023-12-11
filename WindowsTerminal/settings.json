@@ -142,16 +142,16 @@
                 "name": "GIt Bash"
             },
             {
-                "guid": "{f9ceaf27-504c-58d7-927c-d1d6a7ac7d3c}",
+                "commandline": "E:\\Apps\\Develop\\zsh\\usr\\bin\\zsh.exe",
+                "guid": "{9661c894-4f7a-4c32-8c18-e3639d5f7bbc}",
                 "hidden": false,
-                "name": "Ubuntu 22.04.1 LTS",
-                "source": "CanonicalGroupLimited.Ubuntu22.04LTS_79rhkp1fndgsc"
+                "name": "zsh"
             },
             {
-                "guid": "{17bf3de4-5353-5709-bcf9-835bd952a95e}",
-                "hidden": true,
-                "name": "Ubuntu-22.04",
-                "source": "Windows.Terminal.Wsl"
+                "guid": "{e5a83caa-4c73-52b3-ae6b-bc438d721ef9}",
+                "hidden": false,
+                "name": "Ubuntu 22.04.3 LTS",
+                "source": "CanonicalGroupLimited.Ubuntu22.04LTS_79rhkp1fndgsc"
             }
         ]
     },
