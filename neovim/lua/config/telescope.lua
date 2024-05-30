@@ -47,7 +47,7 @@ telescope.setup {
   },
 }
 telescope.load_extension("file_browser")
-print('set keymap')
+
 -- local opts = { noremap = true, silent = true }
 local opts = { noremap = true, silent = false }
 vim.keymap.set('n', '<Leader>c', '<cmd>lua require("telescope.builtin").find_files({ no_ignore = false, hidden = true })<cr>', opts)
