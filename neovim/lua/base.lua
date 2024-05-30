@@ -34,6 +34,12 @@ vim.opt.wildignore: append { '*/node_modules/*'}
 vim.opt.listchars = { space = '･', tab = '»-', trail = '-', eol = '↲', extends = '»', precedes = '«', nbsp = '%' }    -- 制御文字の設定
 vim.opt.list = true                           -- 制御文字の表示
 
+vim.opt.cursorline = true     -- カレント行の強調
+vim.opt.cursorcolumn = true     -- カレント行の強調
+vim.opt.termguicolors = true  -- trueにするとguifg/guibgのみ使用される(guiは使用されずctermの指定が有効になる)
+
+
+
 -- vim標準のファイラーを無効にする(nvim treeおすすめ)
 -- vim.g.loaded_netrw = 1
 -- vim.g.loaded_netrwPlugin = 1
