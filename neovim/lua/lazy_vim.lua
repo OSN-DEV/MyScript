@@ -47,11 +47,6 @@ local commonPlugins = {
         config = false
     },
     {
-        'nvim-treesitter/nvim-treesitter',
-        config = function()
-        end
-    },
-    {
         'osyo-manga/vim-brightest',
     },
 }
@@ -84,7 +79,9 @@ local neovimPlugin = {
     },
     {
         'romgrk/barbar.nvim',
-        config = false
+        config = function()
+            require('config/barbar')
+        end
     },
     {
         'nvim-lualine/lualine.nvim',
@@ -115,7 +112,12 @@ local neovimPlugin = {
         cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
         ft = { "markdown" },
         build = function() vim.fn["mkdp#util#install"]() end,
-    }   
+    },
+    {
+        'nvim-treesitter/nvim-treesitter',
+        config = function()
+        end
+    },
 
 
 -- coc.nvim
