@@ -1,5 +1,5 @@
-local status, telescope = pcall(require, "telescope")
-if (not telescope) then
+local status, plugin = pcall(require, "telescope")
+if (not status) then
     print('telescope is not installed')
     return
 end
@@ -11,7 +11,22 @@ function telescope_buffer_dir()
 end
 local fb_actions = require "telescope".extensions.file_browser.actions
 
-telescope.setup {
+local actions = require("telescope.actions")
+local transform_mod = require("telescope.actions.mt").transform_mod
+local trouble = require("trouble")
+local trouble_telescope = require("trouble.providers.telescope")
+
+-- or create your custom action
+local custom_actions = transform_mod({
+  open_trouble_qflist = function(prompt_bufnr)
+    trouble.toggle("quickfix")
+  end,
+})
+
+
+
+plugin.setup {
+  path_display = { "smart" },
   defaults = {
     mappings = {
       n = {
@@ -46,7 +61,7 @@ telescope.setup {
     },
   },
 }
-telescope.load_extension("file_browser")
+plugin.load_extension("file_browser")
 
 -- local opts = { noremap = true, silent = true }
 local opts = { noremap = true, silent = false }
@@ -57,8 +72,9 @@ vim.keymap.set('n', '<Leader>t', '<cmd>lua require("telescope.builtin").help_tag
 vim.keymap.set('n', '<Leader>;', '<cmd>lua require("telescope.builtin").resume()<cr>', opts)
 vim.keymap.set('n', '<Leader>e', '<cmd>lua require("telescope.builtin").diagnostics()<cr>', opts)
 vim.keymap.set('n', '<Leader>f', '<cmd>lua require("telescope.builtin").find_files( { cwd = vim.fn.expand("%:p:h") })<cr>', opts)
+vim.keymap.set('n', '<Leader>st', '<cmd>TodoTelescope<CR>', opts) -- find todos
 vim.keymap.set("n", "<Leader>sf", function()
-  telescope.extensions.file_browser.file_browser({
+  plugin.extensions.file_browser.file_browser({
     path = "%:p:h",
     cwd = telescope_buffer_dir(),
     respect_gitignore = false,
