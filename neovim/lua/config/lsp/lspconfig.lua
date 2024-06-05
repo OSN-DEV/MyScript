@@ -73,8 +73,10 @@ end
 mason_lspconfig.setup_handlers({
   -- default handler for installed servers
   function(server_name)
+    local capabilities = require('cmp_nvim_lsp').default_capabilities()
     lspconfig[server_name].setup({
       capabilities = capabilities,
+      -- capabilities = require('cmp_nvim_lsp').default_capabilities(),
     })
   end,
   ["svelte"] = function()
