@@ -5,7 +5,6 @@ if (not status) then
     return
 end
 
--- hopを使うのにsetupをコールする必要があるらしい
 plugin.setup {}
 vim.keymap.set('n', '<Leader>hc', '<cmd>HopChar1<cr>')      -- 単一の文字検索
 vim.keymap.set('n', '<Leader>hw', '<cmd>HopWord<cr>')       -- 単語検索

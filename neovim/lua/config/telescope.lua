@@ -13,16 +13,6 @@ local fb_actions = require "telescope".extensions.file_browser.actions
 
 local actions = require("telescope.actions")
 local transform_mod = require("telescope.actions.mt").transform_mod
-local trouble = require("trouble")
-local trouble_telescope = require("trouble.providers.telescope")
-
--- or create your custom action
-local custom_actions = transform_mod({
-  open_trouble_qflist = function(prompt_bufnr)
-    trouble.toggle("quickfix")
-  end,
-})
-
 
 
 plugin.setup {
@@ -72,7 +62,6 @@ vim.keymap.set('n', '<Leader>t', '<cmd>lua require("telescope.builtin").help_tag
 vim.keymap.set('n', '<Leader>;', '<cmd>lua require("telescope.builtin").resume()<cr>', opts)
 vim.keymap.set('n', '<Leader>e', '<cmd>lua require("telescope.builtin").diagnostics()<cr>', opts)
 vim.keymap.set('n', '<Leader>f', '<cmd>lua require("telescope.builtin").find_files( { cwd = vim.fn.expand("%:p:h") })<cr>', opts)
-vim.keymap.set('n', '<Leader>st', '<cmd>TodoTelescope<CR>', opts) -- find todos
 vim.keymap.set("n", "<Leader>sf", function()
   plugin.extensions.file_browser.file_browser({
     path = "%:p:h",

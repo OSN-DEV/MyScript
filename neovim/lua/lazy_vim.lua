@@ -25,8 +25,173 @@ end
 local isVsCode = vim.g.vscode == 1
 
 
--- 両方で使用するプラグイン
-local commonPlugins = {
+-- -- 両方で使用するプラグイン
+-- local commonPlugins = {
+--     {
+--         'machakann/vim-highlightedyank',
+--         config = false
+--     },
+--     {
+--         'osyo-manga/vim-brightest',
+--     },
+--     {
+--        'gbprod/substitute.nvim',
+--        event = { "BufReadPre", "BufNewFile"},
+--        config = function()
+--            require('config/substitute')
+--        end
+--     }
+-- }
+
+-- -- Neovimでのみ使用するプラグイン
+-- local neovimPlugin = {
+--     {
+--         'kshenoy/vim-signature',
+--         config = function()
+--             require('config/signature')
+--         end
+--     },
+--     {
+--         'nvim-tree/nvim-web-devicons',
+--         config = false
+--     },
+--     {
+--         'romgrk/barbar.nvim',
+--         config = function()
+--             require('config/barbar')
+--         end
+--     },
+--     {
+--         'nvim-lualine/lualine.nvim',
+--         dependencies = {'nvim-tree/nvim-web-devicons'},
+--         config = function()
+--             require('config/lualine')
+--         end
+--     },
+--     {
+--         'is0n/fm-nvim'
+--     },
+--     {
+--         'lewis6991/gitsigns.nvim',
+--         event = { "BufReadPre", "BufNewFile"},
+--         config = function()
+--             require('config/gitsigns')
+--         end
+--     },
+--     {
+--         "iamcco/markdown-preview.nvim",
+--         cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+--         ft = { "markdown" },
+--         build = function() vim.fn["mkdp#util#install"]() end,
+--     },
+--     {
+--         'goolord/alpha-nvim',
+--         requires = {
+--             'nvim-tree/nvim-web-devicons',
+--             'nvim-lua/plenary.nvim'
+--         },
+--         event = "VimEnter",
+--         config = function()
+--             require('config/alpha')
+--         end
+--     },
+--     {
+--         'rmagatti/auto-session',
+--         config = function()
+--             require('config/auto-session')
+--         end
+        
+--     },
+--     {
+--         'stevearc/dressing.nvim',
+--         event = "VeryLazy",
+--     },
+--     {
+--         'lukas-reineke/indent-blankline.nvim',
+--         event = { 'BufReadPre', 'BufNewFile' },
+--         config = function(_, opts)
+--             require('config/indent-blankline')
+--         end
+--     },
+--     {
+--         'hrsh7th/nvim-cmp',
+--         event = 'InsertEnter',
+--         dependencies = {
+--             "hrsh7th/cmp-buffer",                   -- source for text in buffer
+--             "hrsh7th/cmp-path",                     -- source for file sytem paths
+--             {
+--                 'L3MON4D3/LuaSnip',
+--                 version = 'v2.*',
+--                 build = 'make install_jsregexp',
+--             },
+--             "saadparwaiz1/cmp_luasnip",             -- for autocompletion
+--             "rafamadriz/friendly-snippets",         -- useful snippets
+--             "onsails/lspkind.nvim",                 -- vs-code like pictograms
+--         },
+--         config = function()
+--             require('config/nvim-cmp')
+--         end
+--     },
+--     {
+--         'windwp/nvim-autopairs',
+--         event = { "InsertEnter" },
+--         dependencies = {
+--             'hrsh7th/nvim-cmp',
+--         },
+--         config = function()
+--             require('config/nvim-autopairs')
+--         end
+--     },
+--     {
+--         'williamboman/mason.nvim',
+--         dependencies = {
+--             'williamboman/mason-lspconfig.nvim',
+--             'WhoIsSethDaniel/mason-tool-installer.nvim',
+--             'hrsh7th/cmp-nvim-lsp',
+--         },
+--         config = function()
+--             require('config/lsp/mason')
+--         end
+--     },
+--     {
+--         'neovim/nvim-lspconfig',
+--         event = { 'BufReadPre', 'BufNewFile'},
+--         dependencies = {
+--             'hrsh7th/cmp-nvim-lsp',
+--             {'antosha417/nvim-lsp-file-operations', config = true},
+--             { 'folke/neodev.nvim', opts = {}},
+--         },
+--         config = function() 
+--             require('config/lsp/lspconfig')
+--         end
+--     },
+--     {
+--         'folke/trouble.nvim',
+--         dependencies = {"nvim-tree/nvim-web-devicons", "folke/todo-comments.nvim"},
+--         config = function()
+--             require('config/trouble')
+--         end
+--     },
+--     {
+--         'stevearc/conform.nvim',
+--         event = { 'BufReadPre', 'BufNewFile'},
+--         config = function()
+--             require('config/formatting')
+--         end
+--     },
+--     {
+--         'mfussenegger/nvim-lint',
+--         event = { 'BufReadPre', 'BufNewFile'},
+--         config = function()
+--             require('config/nvim-lint')
+--         end
+--     }
+-- }
+
+vscodePlugin = {}
+
+commonPlugins = {
+    -- カーソル移動
     {
         'phaazon/hop.nvim',
         -- config = true            -- config = trueを使う場合はfunctionの定義が必要
@@ -34,6 +199,69 @@ local commonPlugins = {
             require('config/hop')
         end
     },
+    -- 文字列の囲いに関するユーティリティ
+    {
+        'tpope/vim-surround',
+        event = { "BufReadPre", "BufNewFile" },
+        version ="*",
+        config = false,
+    },
+}
+neovimPlugin = {
+    -- テーマ
+    {
+        'rebelot/kanagawa.nvim',
+        lazy=false,
+        priority = 1000,
+        config = function()
+            vim.cmd([[colorscheme kanagawa]])
+        end,
+    },
+    -- ファイル一覧表示
+    { 
+        'nvim-tree/nvim-tree.lua',
+        dependencies = {'nvim-tree/nvim-web-devicons'},
+        config = function()
+            require('config/nvim-tree')
+        end
+    },
+    -- ファイル検索など
+    {
+        'nvim-telescope/telescope.nvim', tag = '0.1.6',
+        dependencies = { 
+            'nvim-lua/plenary.nvim',
+            "nvim-tree/nvim-web-devicons",
+        },
+        config = function()
+            require('config/telescope')
+        end
+    },
+    {
+        "nvim-telescope/telescope-file-browser.nvim",
+        dependencies = { 
+            "nvim-telescope/telescope.nvim",
+            "nvim-tree/nvim-web-devicons",
+            "nvim-lua/plenary.nvim"
+        },
+    },
+    -- 構文解析
+    {
+        'nvim-treesitter/nvim-treesitter',
+        event = { "BufReadPre", "BufNewFile"},
+        build = ':TSUpdate',
+        compilers = { "gcc" },
+        config = function()
+            require('config/tree-sitter')
+        end
+    },
+    -- タグを自動で閉じる(tree-sitterが必要)
+    {
+        "windwp/nvim-ts-autotag",
+        config = function()
+            require('config/nvim-ts-autotag')
+        end
+    },
+    -- コメント設定
     {
         'numToStr/Comment.nvim',
         event = { "BufReadPre", "BufNewFile"},
@@ -45,223 +273,6 @@ local commonPlugins = {
         end
         
     },
-    {
-        -- うまいこと機能していない
-        'folke/todo-comments.nvim',
-        event = { "BufReadPre", "BufNewFile"},
-        dependencies = {
-            'nvim-lua/plenary.nvim',
-        },
-        config = function()
-            require('config/todo-comments')
-        end
-    },
-    {
-        'tpope/vim-surround',
-        event = { "BufReadPre", "BufNewFile" },
-        version ="*",
-        config = false,
-    },
-    {
-        'machakann/vim-highlightedyank',
-        config = false
-    },
-    {
-        'osyo-manga/vim-brightest',
-    },
-    {
-       'gbprod/substitute.nvim',
-       event = { "BufReadPre", "BufNewFile"},
-       config = function()
-           require('config/substitute')
-       end
-    }
-}
-
--- Neovimでのみ使用するプラグイン
-local neovimPlugin = {
-    {
-        'rebelot/kanagawa.nvim',
-        lazy=false,
-        priority = 1000,
-        config = function()
-            vim.cmd([[colorscheme kanagawa]])
-        end,
-    },
-    {
-        'kshenoy/vim-signature',
-        config = function()
-            require('config/signature')
-        end
-    },
-    {
-        'nvim-tree/nvim-web-devicons',
-        config = false
-    },
-    { 
-        'nvim-tree/nvim-tree.lua',
-        dependencies = {'nvim-tree/nvim-web-devicons'},
-        config = function()
-            require('config/nvim-tree')
-        end
-    },
-    {
-        'romgrk/barbar.nvim',
-        config = function()
-            require('config/barbar')
-        end
-    },
-    {
-        'nvim-lualine/lualine.nvim',
-        dependencies = {'nvim-tree/nvim-web-devicons'},
-        config = function()
-            require('config/lualine')
-        end
-    },
-    {
-        'nvim-telescope/telescope.nvim', tag = '0.1.6',
-        dependencies = { 'nvim-lua/plenary.nvim', "nvim-tree/nvim-web-devicons", 'folke/todo-comments.nvim' },
-        config = function()
-            require('config/telescope')
-        end
-    },
-    {
-        "nvim-telescope/telescope-file-browser.nvim",
-        dependencies = { "nvim-telescope/telescope.nvim", "nvim-tree/nvim-web-devicons", "nvim-lua/plenary.nvim" },
-    },
-    {
-        'is0n/fm-nvim'
-    },
-    {
-        'lewis6991/gitsigns.nvim',
-        event = { "BufReadPre", "BufNewFile"},
-        config = function()
-            require('config/gitsigns')
-        end
-    },
-    {
-        "iamcco/markdown-preview.nvim",
-        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-        ft = { "markdown" },
-        build = function() vim.fn["mkdp#util#install"]() end,
-    },
-    {
-        "windwp/nvim-ts-autotag",
-        config = function()
-            require('config/nvim-ts-autotag')
-        end
-    },
-    {
-        'nvim-treesitter/nvim-treesitter',
-        event = { "BufReadPre", "BufNewFile"},
-        build = ':TSUpdate',
-        compilers = { "gcc" },
-        config = function()
-            require('config/tree-sitter')
-        end
-    },
-    {
-        'goolord/alpha-nvim',
-        requires = {
-            'nvim-tree/nvim-web-devicons',
-            'nvim-lua/plenary.nvim'
-        },
-        event = "VimEnter",
-        config = function()
-            require('config/alpha')
-        end
-    },
-    {
-        'rmagatti/auto-session',
-        config = function()
-            require('config/auto-session')
-        end
-        
-    },
-    {
-        'stevearc/dressing.nvim',
-        event = "VeryLazy",
-    },
-    {
-        'lukas-reineke/indent-blankline.nvim',
-        event = { 'BufReadPre', 'BufNewFile' },
-        config = function(_, opts)
-            require('config/indent-blankline')
-        end
-    },
-    {
-        'hrsh7th/nvim-cmp',
-        event = 'InsertEnter',
-        dependencies = {
-            "hrsh7th/cmp-buffer",                   -- source for text in buffer
-            "hrsh7th/cmp-path",                     -- source for file sytem paths
-            {
-                'L3MON4D3/LuaSnip',
-                version = 'v2.*',
-                build = 'make install_jsregexp',
-            },
-            "saadparwaiz1/cmp_luasnip",             -- for autocompletion
-            "rafamadriz/friendly-snippets",         -- useful snippets
-            "onsails/lspkind.nvim",                 -- vs-code like pictograms
-        },
-        config = function()
-            require('config/nvim-cmp')
-        end
-    },
-    {
-        'windwp/nvim-autopairs',
-        event = { "InsertEnter" },
-        dependencies = {
-            'hrsh7th/nvim-cmp',
-        },
-        config = function()
-            require('config/nvim-autopairs')
-        end
-    },
-    {
-        'williamboman/mason.nvim',
-        dependencies = {
-            'williamboman/mason-lspconfig.nvim',
-            'WhoIsSethDaniel/mason-tool-installer.nvim',
-            'hrsh7th/cmp-nvim-lsp',
-        },
-        config = function()
-            require('config/lsp/mason')
-        end
-    },
-    {
-        'neovim/nvim-lspconfig',
-        event = { 'BufReadPre', 'BufNewFile'},
-        dependencies = {
-            'hrsh7th/cmp-nvim-lsp',
-            {'antosha417/nvim-lsp-file-operations', config = true},
-            { 'folke/neodev.nvim', opts = {}},
-        },
-        config = function() 
-            require('config/lsp/lspconfig')
-        end
-    },
-    {
-        'folke/trouble.nvim',
-        dependencies = {"nvim-tree/nvim-web-devicons", "folke/todo-comments.nvim"},
-        config = function()
-            require('config/trouble')
-        end
-    },
-    {
-        'stevearc/conform.nvim',
-        event = { 'BufReadPre', 'BufNewFile'},
-        config = function()
-            require('config/formatting')
-        end
-    },
-    {
-        'mfussenegger/nvim-lint',
-        event = { 'BufReadPre', 'BufNewFile'},
-        config = function()
-            require('config/nvim-lint')
-        end
-    }
 }
 
 require('lazy').setup(

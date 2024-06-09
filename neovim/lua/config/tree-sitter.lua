@@ -5,7 +5,6 @@ if (not status) then
 end
 
 local configs = require("nvim-treesitter.configs")
--- local configs = plugin.configs
 configs.setup({
     highlight = { enabled = true },    -- syntax highlighintg
     -- indent = { enable = true },
