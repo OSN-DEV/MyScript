@@ -28,13 +28,6 @@ local isVsCode = vim.g.vscode == 1
 -- -- 両方で使用するプラグイン
 -- local commonPlugins = {
 --     {
---         'machakann/vim-highlightedyank',
---         config = false
---     },
---     {
---         'osyo-manga/vim-brightest',
---     },
---     {
 --        'gbprod/substitute.nvim',
 --        event = { "BufReadPre", "BufNewFile"},
 --        config = function()
@@ -114,25 +107,6 @@ local isVsCode = vim.g.vscode == 1
 --         end
 --     },
 --     {
---         'hrsh7th/nvim-cmp',
---         event = 'InsertEnter',
---         dependencies = {
---             "hrsh7th/cmp-buffer",                   -- source for text in buffer
---             "hrsh7th/cmp-path",                     -- source for file sytem paths
---             {
---                 'L3MON4D3/LuaSnip',
---                 version = 'v2.*',
---                 build = 'make install_jsregexp',
---             },
---             "saadparwaiz1/cmp_luasnip",             -- for autocompletion
---             "rafamadriz/friendly-snippets",         -- useful snippets
---             "onsails/lspkind.nvim",                 -- vs-code like pictograms
---         },
---         config = function()
---             require('config/nvim-cmp')
---         end
---     },
---     {
 --         'windwp/nvim-autopairs',
 --         event = { "InsertEnter" },
 --         dependencies = {
@@ -140,36 +114,6 @@ local isVsCode = vim.g.vscode == 1
 --         },
 --         config = function()
 --             require('config/nvim-autopairs')
---         end
---     },
---     {
---         'williamboman/mason.nvim',
---         dependencies = {
---             'williamboman/mason-lspconfig.nvim',
---             'WhoIsSethDaniel/mason-tool-installer.nvim',
---             'hrsh7th/cmp-nvim-lsp',
---         },
---         config = function()
---             require('config/lsp/mason')
---         end
---     },
---     {
---         'neovim/nvim-lspconfig',
---         event = { 'BufReadPre', 'BufNewFile'},
---         dependencies = {
---             'hrsh7th/cmp-nvim-lsp',
---             {'antosha417/nvim-lsp-file-operations', config = true},
---             { 'folke/neodev.nvim', opts = {}},
---         },
---         config = function() 
---             require('config/lsp/lspconfig')
---         end
---     },
---     {
---         'folke/trouble.nvim',
---         dependencies = {"nvim-tree/nvim-web-devicons", "folke/todo-comments.nvim"},
---         config = function()
---             require('config/trouble')
 --         end
 --     },
 --     {
@@ -205,6 +149,15 @@ commonPlugins = {
         event = { "BufReadPre", "BufNewFile" },
         version ="*",
         config = false,
+    },
+    -- ヤンクしたものをハイライト
+    {
+        'machakann/vim-highlightedyank',
+        config = false
+    },
+    -- カーソル下の単語をハイライト
+    {
+        'osyo-manga/vim-brightest',
     },
 }
 neovimPlugin = {
@@ -271,7 +224,53 @@ neovimPlugin = {
         config = function()
             require('config/comment')
         end
-        
+    },
+    -- 以降LSP関連
+    {
+        'neovim/nvim-lspconfig',
+        config = function() 
+        end
+    },
+    {
+        'williamboman/mason.nvim',
+        config = function() 
+            require('config/mason')
+        end
+    },
+    {
+        'williamboman/mason-lspconfig.nvim',
+        config = function() 
+        end
+    },
+    {
+        'hrsh7th/nvim-cmp',
+        config = function() 
+        end
+    },
+    {
+        'hrsh7th/cmp-nvim-lsp',
+        config = function() 
+        end
+    },
+    {
+        'hrsh7th/vim-vsnip',
+        config = function() 
+        end
+    },
+    {
+        'hrsh7th/cmp-path',
+        config = function() 
+        end
+    },
+    {
+        'hrsh7th/cmp-buffer',
+        config = function() 
+        end
+    },
+    {
+        'hrsh7th/cmp-cmdline',
+        config = function() 
+        end
     },
 }
 
