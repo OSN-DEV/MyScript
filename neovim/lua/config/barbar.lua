@@ -5,6 +5,7 @@ if (not status) then
 end
 
 plugin.setup {}
-vim.keymap.set('n', '<A-,>', '<cmd>BufferPrevious<cr>')      -- 単一の文字検索
-vim.keymap.set('n', '<A-.>', '<cmd>BufferNext<cr>')      -- 単一の文字検索
+vim.keymap.set('n', '<A-,>', '<cmd>BufferPrevious<cr>')      -- 前のバッファ
+vim.keymap.set('n', '<A-.>', '<cmd>BufferNext<cr>')          -- 次のバッファ
+vim.keymap.set('n', '<A-c>', '<cmd>BufferClose<cr>')         -- バッファを閉じる
 

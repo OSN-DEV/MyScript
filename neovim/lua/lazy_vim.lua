@@ -25,113 +25,6 @@ end
 local isVsCode = vim.g.vscode == 1
 
 
--- -- 両方で使用するプラグイン
--- local commonPlugins = {
---     {
---        'gbprod/substitute.nvim',
---        event = { "BufReadPre", "BufNewFile"},
---        config = function()
---            require('config/substitute')
---        end
---     }
--- }
-
--- -- Neovimでのみ使用するプラグイン
--- local neovimPlugin = {
---     {
---         'kshenoy/vim-signature',
---         config = function()
---             require('config/signature')
---         end
---     },
---     {
---         'nvim-tree/nvim-web-devicons',
---         config = false
---     },
---     {
---         'romgrk/barbar.nvim',
---         config = function()
---             require('config/barbar')
---         end
---     },
---     {
---         'nvim-lualine/lualine.nvim',
---         dependencies = {'nvim-tree/nvim-web-devicons'},
---         config = function()
---             require('config/lualine')
---         end
---     },
---     {
---         'is0n/fm-nvim'
---     },
---     {
---         'lewis6991/gitsigns.nvim',
---         event = { "BufReadPre", "BufNewFile"},
---         config = function()
---             require('config/gitsigns')
---         end
---     },
---     {
---         "iamcco/markdown-preview.nvim",
---         cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
---         ft = { "markdown" },
---         build = function() vim.fn["mkdp#util#install"]() end,
---     },
---     {
---         'goolord/alpha-nvim',
---         requires = {
---             'nvim-tree/nvim-web-devicons',
---             'nvim-lua/plenary.nvim'
---         },
---         event = "VimEnter",
---         config = function()
---             require('config/alpha')
---         end
---     },
---     {
---         'rmagatti/auto-session',
---         config = function()
---             require('config/auto-session')
---         end
-        
---     },
---     {
---         'stevearc/dressing.nvim',
---         event = "VeryLazy",
---     },
---     {
---         'lukas-reineke/indent-blankline.nvim',
---         event = { 'BufReadPre', 'BufNewFile' },
---         config = function(_, opts)
---             require('config/indent-blankline')
---         end
---     },
---     {
---         'windwp/nvim-autopairs',
---         event = { "InsertEnter" },
---         dependencies = {
---             'hrsh7th/nvim-cmp',
---         },
---         config = function()
---             require('config/nvim-autopairs')
---         end
---     },
---     {
---         'stevearc/conform.nvim',
---         event = { 'BufReadPre', 'BufNewFile'},
---         config = function()
---             require('config/formatting')
---         end
---     },
---     {
---         'mfussenegger/nvim-lint',
---         event = { 'BufReadPre', 'BufNewFile'},
---         config = function()
---             require('config/nvim-lint')
---         end
---     }
--- }
-
 vscodePlugin = {}
 
 commonPlugins = {
@@ -225,6 +118,103 @@ neovimPlugin = {
             require('config/comment')
         end
     },
+    -- カッコやクォートを閉じる
+    {
+        'windwp/nvim-autopairs',
+        dependencies = {
+            'hrsh7th/nvim-cmp',
+        },
+        config = function()
+            require('config/nvim-autopairs')
+        end
+    },
+    -- 行の印をつける
+    {
+        'kshenoy/vim-signature',
+        config = function()
+            require('config/signature')
+        end
+    },
+    -- バッファのタブ表示
+    {
+        'romgrk/barbar.nvim',
+        config = function()
+            require('config/barbar')
+        end
+    },
+    -- ステータスラインのカスタマイズ
+    {
+        'nvim-lualine/lualine.nvim',
+        dependencies = {'nvim-tree/nvim-web-devicons'},
+        config = function()
+            require('config/lualine')
+        end
+    },
+    -- Gitの変更状態を表示
+    {
+        'lewis6991/gitsigns.nvim',
+        config = function()
+            require('config/gitsigns')
+        end
+    },
+    -- Git Diff/Mergeツール
+    {
+        'sindrets/diffview.nvim',
+        config = function()
+        end
+    },
+    -- -- マークダウンのプレビュー表示(機能せず)
+    -- {
+    --     "iamcco/markdown-preview.nvim",
+    --     ft = { "markdown" },
+    --     build = function() vim.fn["mkdp#util#install"]() end,
+    -- },
+    -- -- install with yarn or npm
+    -- {
+    --   "iamcco/markdown-preview.nvim",
+    --   cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    --   build = "cd app && yarn install",
+    --   init = function()
+    --     vim.g.mkdp_filetypes = { "markdown" }
+    --   end,
+    --   ft = { "markdown" },
+    -- },
+    -- {
+    --     'rmagatti/auto-session',
+    --     config = function()
+    --         require('config/auto-session')
+    --     end
+    -- },
+    -- フィアル名の入力ダイアログを表示
+    {
+        'stevearc/dressing.nvim',
+        event = "VeryLazy",
+    },
+    -- カッコに対応するの強調表示
+    {
+        'lukas-reineke/indent-blankline.nvim',
+        event = { 'BufReadPre', 'BufNewFile' },
+        config = function(_, opts)
+            require('config/indent-blankline')
+        end
+    },
+--     {
+--         'stevearc/conform.nvim',
+--         event = { 'BufReadPre', 'BufNewFile'},
+--         config = function()
+--             require('config/formatting')
+--         end
+--     },
+    -- Lint
+    {
+        'mfussenegger/nvim-lint',
+        event = { 'BufReadPre', 'BufNewFile'},
+        config = function()
+            require('config/nvim-lint')
+        end
+    },
+
+
     -- 以降LSP関連
     {
         'neovim/nvim-lspconfig',
@@ -271,6 +261,10 @@ neovimPlugin = {
         'hrsh7th/cmp-cmdline',
         config = function() 
         end
+    },
+    {
+        'nvim-tree/nvim-web-devicons',
+        config = false
     },
 }
 
